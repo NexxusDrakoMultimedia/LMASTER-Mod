@@ -1,0 +1,5 @@
+* text=auto eol=lf
+LICENSE text eol=lf
+*.xdelta binary
+*.iso binary
+*.zip binary

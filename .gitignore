@@ -1,0 +1,9 @@
+# Build output: never commit disc images or game data.
+build/
+dist/
+*.iso
+*.cso
+*.zso
+*.chd
+*.xdelta
+__pycache__/

@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2026 Nexxus Drako Multimedia
+#
+# What a release is built from. tools/build_release.py reads this file;
+# the version itself lives in VERSION.
+
+[source]
+# The LMAST-Reverse checkout whose patch_disc.py builds the discs, relative
+# to this repo's root, and the commit a release must be built from. Bump
+# the commit when a new release picks up newer LMAST-Reverse code.
+lmast_reverse = "../LMAST-Reverse"
+commit = "26781257a18ca9844da389b2a12666f5897c9ee0"
+upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Reverse"
+
+[vanilla]
+# The only disc image the patches apply to: Redump disc 12334, SLES-54151 v1.01.
+name = "Let's Make a Soccer Team! (Europe, Australia) (En,Fr,De,Es,It).iso"
+size = 3548184576
+crc32 = "1c34e97e"
+md5 = "adadf32f4fd418b60632813b011c3388"
+sha1 = "78771805294c924b68fe4aa01ad52f70229abb9d"
+redump = "https://redump.info/disc/12334/"
+
+# One table per edition. `mod` is the patch_disc.py --mod value. Test-only
+# switches (skip-tutorial, launcher) must never appear here.
+[[edition]]
+name = "Full"
+mod = "lmaster-full"
+
+[[edition]]
+name = "Lite"
+mod = "lmaster-lite"
