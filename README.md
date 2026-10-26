@@ -10,7 +10,7 @@ LMASTER fixes bugs the game shipped with, brings back features that were
 switched off, and (in the Full edition) makes the economy and injuries
 more of a challenge. The full list is in [CHANGELOG.md](CHANGELOG.md).
 
-> **This is a testing release (0.1.0-beta.1).** It should play fine, but
+> **This is a testing release (0.1.0-beta.2).** It should play fine, but
 > some changes haven't been seen in a real game yet. Keep a copy of your
 > original disc image and your memory card, and please tell us what you
 > find (see [Reporting a problem](#reporting-a-problem)).
@@ -23,7 +23,7 @@ more of a challenge. The full list is in [CHANGELOG.md](CHANGELOG.md).
 |---|---|---|
 | Bug fixes and restored features | ✅ | ✅ |
 | Harder economy (dearer facilities, smaller late-game income) | | ✅ |
-| Balance changes (injuries, transfers, fans, merchandise) | | ✅ |
+| Balance changes (injuries, transfers, fans, merchandise, PR, camps, tours) | | ✅ |
 | Fairer league fixtures | | ✅ |
 | Uses your existing saves | ✅ | Uses its own saves |
 
@@ -46,7 +46,7 @@ You can have both: patch two copies of the disc.
    - Windows: **Delta Patcher** (recommended) or **xdelta UI**.
    - Mac or Linux: **xdelta3** (in most package managers, for example
      `brew install xdelta` or `sudo apt install xdelta3`).
-4. **This mod's files**: `LMASTER-Mod-0.1.0-beta.1.zip` from the
+4. **This mod's files**: `LMASTER-Mod-0.1.0-beta.2.zip` from the
    [Releases page](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases).
    Unzip it anywhere.
 
@@ -82,8 +82,8 @@ it for future versions of the mod.
 
 1. Open Delta Patcher.
 2. **Original file:** choose your `.iso`.
-3. **XDelta patch:** choose `LMASTER-Mod-0.1.0-beta.1-Full.xdelta` or
-   `LMASTER-Mod-0.1.0-beta.1-Lite.xdelta`.
+3. **XDelta patch:** choose `LMASTER-Mod-0.1.0-beta.2-Full.xdelta` or
+   `LMASTER-Mod-0.1.0-beta.2-Lite.xdelta`.
 4. Click the cog icon and **untick "Backup original file"** if you
    already made a copy (it saves several GB). Click **Apply patch**.
 5. Wait. The disc is big, so this can take a minute or two. Delta
@@ -93,7 +93,7 @@ it for future versions of the mod.
 **With xdelta3 (Mac, Linux or Windows command line):**
 
 ```bash
-xdelta3 -d -s "original.iso" "LMASTER-Mod-0.1.0-beta.1-Full.xdelta" "LMASTER Full.iso"
+xdelta3 -d -s "original.iso" "LMASTER-Mod-0.1.0-beta.2-Full.xdelta" "LMASTER Full.iso"
 ```
 
 **"The file you are trying to patch is not the right one"** means your
@@ -138,8 +138,8 @@ the middle of the screen. The intro and event movies stay stretched.
 
 | Edition | Widescreen file |
 |---|---|
-| Full | `SLES-54151_59D884B2.pnach` |
-| Lite | `SLES-54151_70F247D9.pnach` |
+| Full | `SLES-54151_E252BEB5.pnach` |
+| Lite | `SLES-54151_CB787EAA.pnach` |
 
 1. In PCSX2, open **Tools → Open Data Directory**, then the `patches`
    folder (create it if it isn't there).
@@ -158,7 +158,7 @@ edition's new name; that patch only works on the original disc.
 - **PCSX2 sees each patched disc as a different game.** Your per-game
   settings and any other `.pnach` cheats or patches for the original
   won't load on it automatically. The original's code is `3CB245D5`;
-  Full's is `59D884B2` and Lite's `70F247D9` (also in `HASHES.txt`).
+  Full's is `E252BEB5` and Lite's `CB787EAA` (also in `HASHES.txt`).
 - Some changes show up only at certain times. The season plan, for
   example, can only be set at the start of a season.
 - **Real logos and texture fixes aren't part of LMASTER.** They
@@ -172,7 +172,7 @@ Found a bug, a crash, or something that doesn't look right? Please
 [open an issue](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues)
 and tell us:
 
-- which edition (Full or Lite) and version (0.1.0-beta.1),
+- which edition (Full or Lite) and version (0.1.0-beta.2),
 - what you were doing, and what happened,
 - a screenshot if you can.
 

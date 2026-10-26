@@ -46,9 +46,13 @@ finished. Git tags are the version with a `v`: `v0.1.0-beta.1`.
    new `## [<version>] - <YYYY-MM-DD>` section (the build refuses to run
    without one), name the LMAST-Reverse commit, and add the compare link
    at the bottom. Write for players: what they'll notice, not addresses.
-   Note which edition has each change, and mark anything not yet seen
-   in a real game.
-4. **Update the README** if the version appears in it, or a step changes.
+   Note which edition has each change, and mark anything not yet tested
+   in PCSX2 *(needs extra testing)*; drop the mark once a test confirms it.
+4. **Update the README**: the version (it appears in file names
+   throughout), any step that changes, and the two PCSX2 CRCs in the
+   widescreen table and "Things to know". The CRCs change whenever an
+   edition changes the game's program; take them from `HASHES.txt` after
+   a first build, then build again.
 5. **Build:**
 
    ```bash

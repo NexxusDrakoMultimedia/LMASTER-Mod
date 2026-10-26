@@ -16,6 +16,37 @@ a testing release.
 
 ## [Unreleased]
 
+## [0.1.0-beta.2] - 2026-10-26
+
+The second testing build of 0.1.0. Built from LMAST-Reverse commit
+[`36c794a`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/36c794a3bceeecf1460f6dc1e8009f648f136491).
+Saves from 0.1.0-beta.1 still load in the same edition.
+
+Tested in PCSX2 since beta.1, on the Full edition: careers save to
+Full's own memory card folder, transfer fees come out doubled, and
+merchandise stock costs half its price to make. Those three no longer
+need extra testing.
+
+### Restored (Lite and Full)
+
+- **The "Renew Mobile Site" PR event is back.** It was complete on the
+  disc, with its text, but the game always hid it. It now turns up from
+  the 2010–11 season like "Renew Home Page" does. *(needs extra testing)*
+
+### Fixed (Lite and Full)
+
+- **PR events follow the economy as intended.** A booming economy never
+  gave its bonus, and an average one took 10% off every event's chance
+  of success. *(needs extra testing)*
+
+### Changed (Full only)
+
+- **PR events cost twice as much** to book (and refund twice as much if
+  cancelled). *(needs extra testing)*
+- **Training camps cost twice as much, and tours three times as much.**
+  A tour to a region where your club is little known now only about
+  breaks even; tour income is unchanged. *(needs extra testing)*
+
 ## [0.1.0-beta.1] - 2026-10-24
 
 The first testing release. Built from LMAST-Reverse commit
@@ -90,5 +121,6 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.1...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.2...HEAD
+[0.1.0-beta.2]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.1...v0.1.0-beta.2
 [0.1.0-beta.1]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/tag/v0.1.0-beta.1
