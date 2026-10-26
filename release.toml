@@ -9,7 +9,7 @@
 # to this repo's root, and the commit a release must be built from. Bump
 # the commit when a new release picks up newer LMAST-Reverse code.
 lmast_reverse = "../LMAST-Reverse"
-commit = "36c794a3bceeecf1460f6dc1e8009f648f136491"
+commit = "ef028dc0c663878deed6c51405c4caad0d487fd3"
 upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Reverse"
 
 [vanilla]
@@ -21,11 +21,14 @@ md5 = "adadf32f4fd418b60632813b011c3388"
 sha1 = "78771805294c924b68fe4aa01ad52f70229abb9d"
 redump = "https://redump.info/disc/12334/"
 
-# One table per edition. `mod` is the patch_disc.py --mod value. Test-only
-# switches (skip-tutorial, launcher) must never appear here.
+# One table per edition. `mod` is the patch_disc.py --mod value, and `args`
+# any other patch_disc.py options it needs, run from the LMAST-Reverse
+# checkout. Test-only switches (skip-tutorial, launcher) must never appear here.
 [[edition]]
 name = "Full"
 mod = "lmaster-full"
+# The third tier rewrites archive entries and their PRELOAD copies.
+args = ["--copies", "--dat", "DAT"]
 
 [[edition]]
 name = "Lite"

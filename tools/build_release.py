@@ -216,9 +216,11 @@ def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep,
     iso = os.path.join(build, tag + ".iso")
     patch = os.path.join(out_dir, tag + ".xdelta")
     check = os.path.join(build, tag + ".check.iso")
-    print("\n== %s (--mod %s) ==" % (ed["name"], ed["mod"]))
+    args = ed.get("args", [])
+    print("\n== %s (--mod %s) ==" % (ed["name"], " ".join([ed["mod"]] + args)))
     py = sys.executable
-    out = run([py, "SRC/patch_disc.py", "patch", vanilla, iso, "--mod", ed["mod"]], repo, log)
+    out = run([py, "SRC/patch_disc.py", "patch", vanilla, iso, "--mod", ed["mod"]] + args,
+              repo, log)
     crc = re.search(r"PCSX2 CRC of the executable ([0-9A-F]{8})", out)
     built = hashes(iso, tag + ".iso")
     run([py, "SRC/vcdiff.py", "make", vanilla, iso, patch], repo, log)

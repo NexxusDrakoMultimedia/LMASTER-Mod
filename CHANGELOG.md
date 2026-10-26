@@ -16,6 +16,58 @@ a testing release.
 
 ## [Unreleased]
 
+## [0.1.0-beta.3] - 2026-10-27
+
+The third testing build of 0.1.0. Built from LMAST-Reverse commit
+[`ef028dc`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/ef028dc0c663878deed6c51405c4caad0d487fd3).
+
+> **Full needs a new career.** The third tier (below) makes the save
+> bigger, so Full careers from 0.1.0-beta.2 or earlier won't load on
+> this version. They stay on the memory card, and still load on the
+> disc they came from. Lite saves are unaffected.
+
+### Added (Full only)
+
+- **A third tier.** Every nation now has a third division, played out of
+  sight: English League 1, French League Division 3, Third German
+  League, Italian League C, Spanish League Division 3 and Third Dutch
+  League. The game had them planned, with names and clubs, but never
+  used them.
+  - Each season only the second division's **last** club goes down, and
+    the third tier's winner comes up. Your rival can go down too.
+  - In your nation, the second division keeps its real size (24 clubs in
+    England): two of its clubs start in the third tier instead.
+  - The third tier's clubs also play their nation's lower cup (the
+    English League Cup or the Club Cups), which now starts in the first
+    week of December. *(needs extra testing)*
+  - Known issue: Club Info's **Other Club Info** doesn't list the third
+    tier's clubs yet.
+
+### Changed (Full only)
+
+- **A harsher end.** Finish last in the second division and the game is
+  over after that one season. (In the original, it took finishing in the
+  bottom two for two seasons running.) *(needs extra testing)*
+- **Reputation rises half as fast.** Every gain in club status (wins,
+  draws, final places, the yearly bonus) is halved; losses are as
+  before. *(needs extra testing)*
+- **Transfer fees follow player quality more.** Lesser players cost
+  about four times the original fee, and the very best players reach
+  about £246M. *(needs extra testing)*
+- **Overseas bases** still cost twice as much, but no longer do twice as
+  much per level: each pound now buys half as much as in the original.
+  *(needs extra testing)*
+
+### Fixed (Lite and Full)
+
+- **Overseas popularity no longer grows ten times too fast.** A
+  misplaced decimal point made it rise tenfold in a region where your
+  best player from there had one particular (hidden) rank.
+  *(needs extra testing: the rank and popularity are hidden in game)*
+- **Going out in the European Club Cup's last 16 earns popularity.** The
+  game paid clubs knocked out in the last 32 instead.
+  *(needs extra testing)*
+
 ## [0.1.0-beta.2] - 2026-10-26
 
 The second testing build of 0.1.0. Built from LMAST-Reverse commit
@@ -121,6 +173,7 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.2...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.3...HEAD
+[0.1.0-beta.3]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.2...v0.1.0-beta.3
 [0.1.0-beta.2]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.1...v0.1.0-beta.2
 [0.1.0-beta.1]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/tag/v0.1.0-beta.1

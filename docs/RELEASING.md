@@ -36,6 +36,12 @@ While the major number is 0 the mod is still in testing, and any
 release may change things. 1.0.0 is the first release you'd call
 finished. Git tags are the version with a `v`: `v0.1.0-beta.1`.
 
+Until a version is final, each new test build of it only bumps the
+`-beta.N` number, whatever it adds or breaks: semver treats pre-releases
+as unstable. So 0.1.0-beta.3 can follow beta.2 even with new features
+and a save break. A save break still gets a warning at the top of its
+CHANGELOG section and a line in the README's saves section.
+
 ## Making a release
 
 1. **Pick the LMAST-Reverse commit.** Commit and push the work there
