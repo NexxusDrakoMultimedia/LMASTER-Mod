@@ -6,36 +6,41 @@
 **A fan-made fix-and-restore mod for *Let's Make a Soccer Team!* on
 PlayStation 2 (European release).**
 
-LMASTER fixes bugs the game shipped with, brings back features that were
-switched off, and (in the Full edition) makes the economy and injuries
-more of a challenge and adds a hidden third tier below each second
-division. The full list is in [CHANGELOG.md](CHANGELOG.md).
+LMASTER fixes bugs the game shipped with and brings back features that
+were switched off. The Full and Max editions add a hidden third tier
+below each second division, and Max also makes the economy and injuries
+more of a challenge. The full list is in [CHANGELOG.md](CHANGELOG.md).
 
-> **This is a testing release (0.1.0-beta.3).** It should play fine, but
-> some changes haven't been seen in a real game yet. Keep a copy of your
-> original disc image and your memory card, and please tell us what you
-> find (see [Reporting a problem](#reporting-a-problem)).
+> **Version 0.1.0.** Some changes still need more testing in real games
+> (they're marked in the changelog). Keep a copy of your original disc
+> image and your memory card, and please tell us what you find (see
+> [Reporting a problem](#reporting-a-problem)).
 
 ---
 
 ## Which edition do I want?
 
-| | **Lite** | **Full** |
-|---|---|---|
-| Bug fixes and restored features | ✅ | ✅ |
-| Harder economy (dearer facilities, smaller late-game income) | | ✅ |
-| Balance changes (injuries, transfers, reputation, fans, merchandise, PR, camps, tours) | | ✅ |
-| Fairer league fixtures | | ✅ |
-| A third tier, and the game ends after one season last in the second division | | ✅ |
-| Uses your existing saves | ✅ | Needs a new career |
+| | **Lite** | **Full** | **Max** |
+|---|---|---|---|
+| Bug fixes and restored features | ✅ | ✅ | ✅ |
+| A third tier, and the game ends after one season last in the second division | | ✅ | ✅ |
+| Fairer league fixtures | | ✅ | ✅ |
+| Restored "two months" and "nine months" injury lines | | ✅ | ✅ |
+| Harder economy (dearer facilities, smaller late-game income) | | | ✅ |
+| Balance changes (injuries, transfers, reputation, fans, merchandise, PR, camps, tours) | | | ✅ |
+| Saves | Your existing saves | Its own saves; new career | Its own saves; new career |
 
 - **Pick Lite** if you want the game as it was meant to be, with the
   bugs fixed, and you want to carry on with your current careers.
-- **Pick Full** if you want all that plus a tougher, deeper game. It
-  keeps its saves apart from the original game, so nothing gets mixed up,
-  and you start a new career on it.
+- **Pick Full** for a deeper league system without changing the game's
+  difficulty: the third tier and its harsher relegation, with the
+  original economy.
+- **Pick Max** for the toughest game: everything in Full, plus a harder
+  economy and balance changes that punish mistakes.
 
-You can have both: patch two copies of the disc.
+Full and Max keep their saves apart from the original game and from each
+other, so nothing gets mixed up. You can have all three: patch a copy of
+the disc for each.
 
 ## What you need
 
@@ -49,7 +54,7 @@ You can have both: patch two copies of the disc.
    - Windows: **Delta Patcher** (recommended) or **xdelta UI**.
    - Mac or Linux: **xdelta3** (in most package managers, for example
      `brew install xdelta` or `sudo apt install xdelta3`).
-4. **This mod's files**: `LMASTER-Mod-0.1.0-beta.3.zip` from the
+4. **This mod's files**: `LMASTER-Mod-0.1.0.zip` from the
    [Releases page](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases).
    Unzip it anywhere.
 
@@ -85,8 +90,8 @@ it for future versions of the mod.
 
 1. Open Delta Patcher.
 2. **Original file:** choose your `.iso`.
-3. **XDelta patch:** choose `LMASTER-Mod-0.1.0-beta.3-Full.xdelta` or
-   `LMASTER-Mod-0.1.0-beta.3-Lite.xdelta`.
+3. **XDelta patch:** choose `LMASTER-Mod-0.1.0-Lite.xdelta`,
+   `LMASTER-Mod-0.1.0-Full.xdelta` or `LMASTER-Mod-0.1.0-Max.xdelta`.
 4. Click the cog icon and **untick "Backup original file"** if you
    already made a copy (it saves several GB). Click **Apply patch**.
 5. Wait. The disc is big, so this can take a minute or two. Delta
@@ -96,7 +101,7 @@ it for future versions of the mod.
 **With xdelta3 (Mac, Linux or Windows command line):**
 
 ```bash
-xdelta3 -d -s "original.iso" "LMASTER-Mod-0.1.0-beta.3-Full.xdelta" "LMASTER Full.iso"
+xdelta3 -d -s "original.iso" "LMASTER-Mod-0.1.0-Full.xdelta" "LMASTER Full.iso"
 ```
 
 **"The file you are trying to patch is not the right one"** means your
@@ -123,13 +128,17 @@ love to hear how it went. The widescreen patches are for PCSX2 only.
 - **Lite** uses the same saves as the original game. Your careers carry
   on, now with the fixes. It's still wise to back up your memory card
   first (copy the card file from PCSX2's `memcards` folder).
-- **Full** has its own save slots on the memory card, so the original
-  game never sees Full's careers, and Full never sees the original's.
-  **Full needs a new career.** Its third tier makes the save bigger, so
-  careers from the original game, from Lite, or from Full 0.1.0-beta.2
-  or earlier won't load on it. They stay safe on the card for the game
-  they came from.
-- Importing players from *Virtua Pro Football* still works in both
+- **Full** and **Max** each have their own save slots on the memory
+  card, so the original game, Full and Max never see each other's
+  careers. **Both need a new career.** The third tier makes the save
+  bigger, so careers from the original game or from Lite won't load on
+  them. Those careers stay safe on the card for the game they came from.
+  - Coming from the 0.1.0 betas: the beta's Full is now Max and uses the
+    same save slots, so a beta.3 Full career may load on Max (not tested;
+    a new career is safest). Careers from beta.2 or earlier won't load.
+  - Full and Max share one VS data slot, since a VS team is the same on
+    both.
+- Importing players from *Virtua Pro Football* still works in all three
   editions.
 
 ### Widescreen (optional)
@@ -141,12 +150,13 @@ the middle of the screen. The intro and event movies stay stretched.
 
 | Edition | Widescreen file |
 |---|---|
-| Full | `SLES-54151_E2A9E3B9.pnach` |
 | Lite | `SLES-54151_99BD971F.pnach` |
+| Full | `SLES-54151_B4EFE4C7.pnach` |
+| Max | `SLES-54151_E2A9F585.pnach` |
 
 1. In PCSX2, open **Tools → Open Data Directory**, then the `patches`
    folder (create it if it isn't there).
-2. Copy the file for your edition into it. You can copy both.
+2. Copy the file for your edition into it. You can copy all three.
 3. Right-click the patched game in PCSX2's game list, choose
    **Properties → Patches**, and tick **Widescreen 16:9**.
 4. Boot the game. PCSX2 switches to 16:9 by itself.
@@ -161,7 +171,8 @@ edition's new name; that patch only works on the original disc.
 - **PCSX2 sees each patched disc as a different game.** Your per-game
   settings and any other `.pnach` cheats or patches for the original
   won't load on it automatically. The original's code is `3CB245D5`;
-  Full's is `E2A9E3B9` and Lite's `99BD971F` (also in `HASHES.txt`).
+  Lite's is `99BD971F`, Full's `B4EFE4C7` and Max's `E2A9F585` (also in
+  `HASHES.txt`).
 - Some changes show up only at certain times. The season plan, for
   example, can only be set at the start of a season.
 - **Real logos and texture fixes aren't part of LMASTER.** They
@@ -175,7 +186,7 @@ Found a bug, a crash, or something that doesn't look right? Please
 [open an issue](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues)
 and tell us:
 
-- which edition (Full or Lite) and version (0.1.0-beta.3),
+- which edition (Lite, Full or Max) and version (0.1.0),
 - what you were doing, and what happened,
 - a screenshot if you can.
 

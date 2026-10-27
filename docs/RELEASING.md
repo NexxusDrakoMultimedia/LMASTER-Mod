@@ -55,7 +55,7 @@ CHANGELOG section and a line in the README's saves section.
    Note which edition has each change, and mark anything not yet tested
    in PCSX2 *(needs extra testing)*; drop the mark once a test confirms it.
 4. **Update the README**: the version (it appears in file names
-   throughout), any step that changes, and the two PCSX2 CRCs in the
+   throughout), any step that changes, and each edition's PCSX2 CRC in the
    widescreen table and "Things to know". The CRCs change whenever an
    edition changes the game's program; take them from `HASHES.txt` after
    a first build, then build again.
@@ -73,7 +73,7 @@ CHANGELOG section and a line in the README's saves section.
    the built disc, and, if `xdelta3` is installed, applies it with
    xdelta3 too. `--keep-isos` keeps the built discs in `build/` for
    testing in PCSX2. The log is `build/build.log`.
-6. **Test** both editions in PCSX2: boot, start a career, save, load.
+6. **Test** every edition in PCSX2: boot, start a career, save, load.
 7. **Commit and tag:**
 
    ```bash
