@@ -34,7 +34,8 @@ Patches go on the GitHub release.
 
 While the major number is 0 the mod is still in testing, and any
 release may change things. 1.0.0 is the first release you'd call
-finished. Git tags are the version with a `v`: `v0.1.0-beta.1`.
+finished, so until then a change that would be MAJOR (a save break, new
+save folders) bumps MINOR instead: 0.1.0 → 0.2.0, never 1.0.0. Git tags are the version with a `v`: `v0.1.0-beta.1`.
 
 Until a version is final, each new test build of it only bumps the
 `-beta.N` number, whatever it adds or breaks: semver treats pre-releases
@@ -46,7 +47,9 @@ CHANGELOG section and a line in the README's saves section.
 
 1. **Pick the LMAST-Reverse commit.** Commit and push the work there
    first, so the release links to code anyone can see. Put its full hash
-   in `release.toml` under `[source] commit`.
+   in `release.toml` under `[source] commit`, and in the README's links
+   to LMAST-Reverse's `DOC/LMASTER_MOD.md`, so they show the version of
+   that document this release was built from.
 2. **Set the version** in `VERSION`.
 3. **Update `CHANGELOG.md`.** Move what's under `## [Unreleased]` into a
    new `## [<version>] - <YYYY-MM-DD>` section (the build refuses to run
@@ -95,4 +98,6 @@ CHANGELOG section and a line in the README's saves section.
 
 Add an `[[edition]]` table to `release.toml` with a `name` and a `mod`
 (any `patch_disc.py --mod` value, comma-separated switches allowed), and
-a row for it in the README's edition table.
+a row for it in the README's edition table. The editions, groups and
+switches `--mod` takes are listed in LMAST-Reverse's
+[`DOC/LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/main/DOC/LMASTER_MOD.md#the-switch-levels).

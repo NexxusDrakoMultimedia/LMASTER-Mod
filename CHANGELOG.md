@@ -18,6 +18,76 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-31
+
+Built from LMAST-Reverse commit
+[`390fbc9`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/390fbc9718e7e7ea11131ec320afbf6d739c9b68).
+How each change works, and how it was tested, is in that commit's
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/390fbc9718e7e7ea11131ec320afbf6d739c9b68/DOC/LMASTER_MOD.md).
+
+> **Full and Max need a new career.** The real names and real grounds
+> change the clubs' and stadiums' data, so careers from 0.1.0 may not
+> work correctly on this version. Don't load them on 0.2.0, even though
+> they use the same save folders (`-F`, `-M`). The game won't stop you,
+> so delete them once you've moved to 0.2.0; they only work on the 0.1.0
+> disc they came from. Lite saves are
+> unaffected: Lite's new changes are text and match fixes only.
+
+Since 0.1.0, the "Renew Mobile Site" PR event has been tried in a real
+game: it's offered, can be booked and is reported in the month-end mail.
+
+### Added (Full and Max)
+
+- **Real names.** Leagues, competitions, clubs, nations and national
+  teams take their real names of the 2005-06 season, in all five
+  languages, where the original made them up (Highbury is Arsenal FC,
+  the European League the UEFA Champions League). They match the logos
+  and kits of LMAST Realism.
+  - Clubs use their official names as far as the game's 18 characters
+    allow (`Olympique Lyonnais`, `Eintr. Frankfurt`), and Spanish clubs
+    are written without dots (`FC Barcelona`, `Real Madrid CF`).
+  - International competitions carry UEFA's and FIFA's names (UEFA
+    EURO, FIFA World Cup and their qualifiers), and the Standings menu's
+    club ranking reads "UEFA Ranking".
+  - Nations and national teams take FIFA's 2005-06 names
+    (Serbia-Montenegro, Republic of Ireland, Côte d'Ivoire).
+  - The news and rules texts that mention a competition are rewritten
+    to match. *(the French, German, Italian and Spanish texts need extra
+    testing)*
+- **Real stadium names.** Every club plays at its 2005-06 ground, named
+  without sponsors where the ground has another name
+  (Westfalenstadion, not Signal Iduna Park).
+- **Your stadium is named after you**, not your city.
+- **Grounds of their real size.** Each computer club's ground holds
+  about its 2005-06 capacity (within 3,000 seats), and looks the part:
+  only Camp Nou gets the biggest bowl, and clubs of the same size are
+  spread over different grounds, so they don't all look alike.
+- **More varied sponsor boards.** Every ground's advert boards are
+  drawn from all 205 sponsor logos. Small grounds repeat a few sponsors
+  (three at the smallest) and grounds from 55,000 show twelve different
+  ones. Your rival's ground keeps its own boards.
+
+### Changed (Full and Max)
+
+- **The Special stadium holds 100,000**, not 110,000, and so do the
+  biggest computer clubs' grounds that share its size.
+  *(needs extra testing)*
+
+### Fixed
+
+- **Pressing counts at every level** (Lite, Full and Max). A player's
+  press tendency only ever counted as level 0 or 1 in matches, so levels
+  2 to 4 pressed no harder than 1. *(needs extra testing: whether
+  high-pressing sides now play differently)*
+- **Game Over conditions name the right leagues** (Lite, Full and Max).
+  Spain's named the Italian League B in English and German, and the
+  Netherlands' named a Spanish or German league in English, French,
+  German and Spanish.
+- **The Spanish introduction to the leagues says 26 clubs**, not 216
+  (Lite, Full and Max).
+- **"AL-Hyde" is spelled "Al-Hyde"** (Lite; in Full and Max the club is
+  Al-Sadd).
+
 ## [0.1.0] - 2026-10-27
 
 The first stable release. Built from LMAST-Reverse commit
@@ -303,7 +373,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.3...v0.1.0
 [0.1.0-beta.3]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.2...v0.1.0-beta.3
 [0.1.0-beta.2]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.1...v0.1.0-beta.2
