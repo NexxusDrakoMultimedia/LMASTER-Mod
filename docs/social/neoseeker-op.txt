@@ -1,0 +1,97 @@
+[div align=center][b][size=4]LMASTER Mod[/size][/b]
+[i]A fan-made fix-and-restore mod for Let's Make a Soccer Team! on PlayStation 2 (European release)[/i]
+
+[b]Current version: 0.2.0[/b] (2026-10-31)
+[link name=Download]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/latest[/link] · [link name=Changelog]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/blob/main/CHANGELOG.md[/link] · [link name=Full instructions (README)]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod#readme[/link] · [link name=Report a problem]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues[/link][/div]
+
+[b][size=3]What is it?[/size][/b]
+
+LMASTER fixes bugs [i]Let's Make a Soccer Team![/i] shipped with and brings back features that were switched off or cut. The Full and Max editions go further: a hidden third tier below each second division, the real names and grounds of the 2005-06 season, and (in Max) a tougher economy.
+
+It comes as small patch files you apply to your own disc image of the game. The mod contains none of the game's files.
+
+[b][size=3]Which edition do I want?[/size][/b]
+
+[ul]
+[li][b]Lite[/b]: the game as it was meant to be, with the bugs fixed. Uses your existing saves, so your careers carry on.
+[li][b]Full[/b]: everything in Lite, plus a deeper league system and the real clubs and grounds, with the game's original difficulty and economy. Its own saves; needs a new career.
+[li][b]Max[/b]: everything in Full, plus a harder economy and balance changes that punish mistakes. Its own saves; needs a new career.
+[/ul]
+
+You can have all three: patch a copy of the disc for each. Full and Max keep their saves apart from the original game and from each other.
+
+[b][size=3]Highlights[/size][/b]
+
+[b]In every edition[/b]
+[ul]
+[li]Main sponsor negotiation is back, as in the Japanese release.
+[li]Training camps train what they say, and sit in the right towns.
+[li]Drills have the right names, season tickets sell by club status, and the World National Cup's results can be viewed.
+[li]Pressing counts at every level, and your rival's manager matches the rival's style.
+[li]The restored "Renew Mobile Site" PR event, and fixes to wrong texts, injuries and popularity.
+[/ul]
+
+[b]Full and Max[/b]
+[ul]
+[li][b]A third tier[/b] in every nation, played out of sight, with promotion and relegation. Finish last in the second division and it's game over.
+[li][b]Real names[/b] of leagues, competitions, clubs, nations and national teams as of 2005-06, in all five languages.
+[li][b]Real grounds[/b]: every club at its 2005-06 stadium, with its real name and about its real size. Your stadium is named after you.
+[li]Fairer league fixtures, more varied sponsor boards, and the cut "two months" and "nine months" injury lines.
+[/ul]
+
+[b]Max only[/b]
+[ul]
+[li]A harder economy: dearer facilities, wider ticket prices, smaller late-game income.
+[li]Balance changes to injuries, transfer fees, reputation, fans, merchandise, PR, camps and tours.
+[/ul]
+
+The [link name=changelog]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/blob/main/CHANGELOG.md[/link] lists every change, with which edition has it.
+
+[b][size=3]What you need[/size][/b]
+
+[ol]
+[li][b]Your own copy of the game[/b] as a disc image (.iso), the European release only: [i]Let's Make a Soccer Team![/i], SLES-54151. It must be the [link name=Redump dump]https://redump.info/disc/12334/[/link] exactly: 3,548,184,576 bytes, MD5 adadf32f4fd418b60632813b011c3388. Compressed images (.cso, .zso, .chd) must be turned back into an .iso first.
+[li][b]PCSX2[/b] ([link name=pcsx2.net]https://pcsx2.net[/link]). The mod is made and tested on PCSX2.
+[li][b]A patching program[/b] for .xdelta files: Delta Patcher on Windows, or xdelta3 on Mac and Linux.
+[li][b]The mod's zip[/b] from the [link name=Releases page]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/latest[/link].
+[/ol]
+
+[b][size=3]How to install[/size][/b]
+
+[ol]
+[li][b]Make a copy of your original .iso and keep it.[/b] You'll need it for every future version.
+[li]Open Delta Patcher, choose your .iso as the original file and the .xdelta for your edition as the patch, then click Apply patch. It overwrites the file you chose, so rename it afterwards (e.g. "LMASTER Full.iso").
+[li]Open the patched .iso in PCSX2 like the original.
+[/ol]
+
+If the patcher says the file isn't the right one, your disc image doesn't match: it may be compressed, a different region, or a bad dump. The [link name=README]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod#readme[/link] has the full steps, the xdelta3 command, and how to check your disc's fingerprint.
+
+[b]Optional widescreen:[/b] the zip's widescreen folder has a PCSX2 patch per edition that shows matches in 16:9 without stretching and keeps menus and HUD at their normal shape. Copy it into PCSX2's patches folder and tick Widescreen 16:9 in the game's Properties → Patches.
+
+[b][size=3]Good to know[/size][/b]
+
+[ul]
+[li][b]This is testing software.[/b] New versions come out often, and any version may need a new career; the changelog says when, at the top of that version's notes. Delete old careers once you've moved on: the game won't stop you loading them.
+[li]Changes marked [i]needs extra testing[/i] are built and checked with tools but haven't been tried in enough real games yet.
+[li]Savestates don't carry over between the original and a patched disc. Save to the memory card in-game.
+[li]PCSX2 sees each patched disc as a different game, so per-game settings and other patches for the original won't load on it automatically.
+[li]Real PS2s: the patched image is a normal PS2 disc image, so it should work on a modded PS2 in principle, but that isn't tested or supported. Tell us if you try!
+[li]Real logos and texture fixes aren't part of LMASTER. They belong to the sister project [link name=LMAST-Realism]https://github.com/NexxusDrakoMultimedia/LMAST-Realism[/link]. LMASTER's real names match its logos and kits.
+[/ul]
+
+[b][size=3]Reporting a problem[/size][/b]
+
+Found a bug, a crash or something that looks wrong? [link name=Open an issue on GitHub]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues[/link] or reply in this thread, and tell us which edition and version, what you were doing and what happened, with a screenshot if you can. Reports that something works are just as useful, especially for changes marked [i]needs extra testing[/i].
+
+[b][size=3]Credits[/size][/b]
+
+[ul]
+[li]LMASTER Mod by [b]Pyra Drake[/b] of [link name=Nexxus Drako Multimedia]https://github.com/NexxusDrakoMultimedia[/link].
+[li]Reverse engineering, mod design and testing through the [link name=LMAST-Reverse]https://github.com/NexxusDrakoMultimedia/LMAST-Reverse[/link] project, done with Claude (Anthropic). How every change works is documented in its [link name=LMASTER_MOD.md]https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/master/DOC/LMASTER_MOD.md[/link].
+[li]Disc fingerprints from [link name=Redump]https://redump.info/[/link].
+[li][i]Let's Make a Soccer Team![/i] © SEGA.
+[/ul]
+
+The LMASTER Mod patches, tools and documents are free software under the GNU General Public License, version 3 or (at your option) any later version (GPL-3.0-or-later). The game itself is not covered by this license and remains SEGA's.
+
+[b]DISCLAIMER:[/b] This project is a non-profit, fan-made modification and is not affiliated with or endorsed by SEGA, Adidas, or any football competition, league, club, federation, manager, chairman, or player.

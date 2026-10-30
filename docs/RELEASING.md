@@ -14,6 +14,7 @@ For the maintainer. Players want the [README](../README.md).
 | `CHANGELOG.md` | what each release changes, in players' words ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/)) |
 | `tools/build_release.py` | builds, checks, hashes and zips a release |
 | `README.md`, `CHANGELOG.md`, `LICENSE` | copied into every release zip |
+| `docs/social/` | the opening posts of the mod's Discord and Neoseeker threads |
 
 The mod's code lives in LMAST-Reverse; this repo only decides **which
 commit** and **which switches** make a release, and packages it. No disc
@@ -93,6 +94,13 @@ CHANGELOG section and a line in the README's saves section.
    ```bash
    gh release create v0.1.0-beta.1 dist/LMASTER-Mod-0.1.0-beta.1.zip dist/LMASTER-Mod-0.1.0-beta.1.zip.sha256 --prerelease --title "LMASTER Mod 0.1.0-beta.1 (testing)" --notes-file <notes.md>
    ```
+
+9. **Announce** it once the release is up, so the links work: an update
+   post on Discord and in the Neoseeker thread, from the CHANGELOG
+   section, with any save warning first. Update the Neoseeker opening
+   post's version line, and the opening posts in
+   [`docs/social/`](social/README.md) if the release changes what they
+   say.
 
 ## Adding an edition
 
