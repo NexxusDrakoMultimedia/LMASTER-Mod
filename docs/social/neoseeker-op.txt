@@ -1,7 +1,7 @@
 [div align=center][b][size=4]LMASTER Mod[/size][/b]
 [i]A fan-made fix-and-restore mod for Let's Make a Soccer Team! on PlayStation 2 (European release)[/i]
 
-[b]Current version: 0.2.0[/b] (2026-10-31)
+[b]Current version: 0.3.0[/b] (2026-11-01)
 [link name=Download]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/latest[/link] · [link name=Changelog]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/blob/main/CHANGELOG.md[/link] · [link name=Full instructions (README)]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod#readme[/link] · [link name=Report a problem]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues[/link][/div]
 
 [b][size=3]What is it?[/size][/b]
@@ -28,6 +28,7 @@ You can have all three: patch a copy of the disc for each. Full and Max keep the
 [li]Training camps train what they say, and sit in the right towns.
 [li]Drills have the right names, season tickets sell by club status, and the World National Cup's results can be viewed.
 [li]Pressing counts at every level, and your rival's manager matches the rival's style.
+[li]The travelling salesman's training coach, boots and headphones do what they promise, and players imported from Virtua Pro Football no longer arrive as part-time goalkeepers.
 [li]The restored "Renew Mobile Site" PR event, and fixes to wrong texts, injuries and popularity.
 [/ul]
 

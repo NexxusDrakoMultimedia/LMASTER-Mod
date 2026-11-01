@@ -18,6 +18,44 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-01
+
+Built from LMAST-Reverse commit
+[`d745fd7`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d745fd7cb32af45a838c21a4d731bf9a55c6624d).
+How each change works, and how it was tested, is in that commit's
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d745fd7cb32af45a838c21a4d731bf9a55c6624d/DOC/LMASTER_MOD.md).
+
+Every change in this version is a fix, in all three editions, and none
+of them should break a career in progress: careers from 0.2.0 can carry
+on, in every edition.
+
+### Fixed (Lite, Full and Max)
+
+- **Imported *Virtua Pro Football* players can't keep goal.** Every
+  outfield player imported from *Virtua Pro Football* arrived with
+  goalkeeping as a second position. Players imported before this
+  version keep it in your save.
+- **The travelling salesman's special training coach works.** The
+  boost his training was meant to give was never switched on, so his
+  visit only rested the squad. Now it boosts your players' attack
+  patterns until his training wears off a month later, like the teamwork
+  lecturer's. *(needs extra testing: the coach first comes in
+  season 8)*
+- **The salesman's boots and headphones do what they say.** The
+  Lead-Spike Boots promised power but raised only crosses, and the
+  Football Theory Headphones promised mental growth but raised kick
+  strength, tackle and contact strength. The boots now raise those three,
+  and the headphones raise mental abilities. *(needs extra testing)*
+- **Widescreen patches:**
+  - The player models in menu panels, such as the four kits on the
+    Sponsor contract's "Choose new kit." step and Edit club's Result
+    panel, stand in the middle of their panel instead of being cut off
+    at its edge.
+  - The Player details portrait on the match Tactics screen has its
+    grey background edge to edge, not black on the left half.
+  - The newspaper pages in a new career's opening look as they do
+    without the patch.
+
 ## [0.2.0] - 2026-10-31
 
 Built from LMAST-Reverse commit
@@ -373,7 +411,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.3...v0.1.0
 [0.1.0-beta.3]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.2...v0.1.0-beta.3
