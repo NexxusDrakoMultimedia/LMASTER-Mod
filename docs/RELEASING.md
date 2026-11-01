@@ -92,8 +92,7 @@ CHANGELOG section and a line in the README's saves section.
    the built disc, and, if `xdelta3` is installed, applies it with
    xdelta3 too. `--keep-isos` keeps the built discs in `build/` for
    testing in PCSX2. The log is `build/build.log`.
-7. **Test** every edition in PCSX2: the "Every release, every edition"
-   table in [`TESTING.md`](../TESTING.md).
+7. **Test** every edition in PCSX2: boot, start a career, save, load.
 8. **Commit and tag:**
 
    ```bash

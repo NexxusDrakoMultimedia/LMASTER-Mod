@@ -40,24 +40,6 @@ A confirmed check goes into LMAST-Reverse's docs as "Tested in PCSX2",
 with who saw it and the date, and comes off this list at the next
 release; the CHANGELOG then drops its *(needs extra testing)* mark.
 
-## Every release, every edition
-
-Each new version is played through these in all three editions before
-it's published ([docs/RELEASING.md](docs/RELEASING.md), step 7). Testers
-are welcome to repeat them on the released patches.
-
-| Check | Lite | Full | Max |
-|---|---|---|---|
-| The patch applies to the Redump disc, and the result's SHA-1 matches `HASHES.txt` | [ ] | [ ] | [ ] |
-| The disc boots to the title screen | [ ] | [ ] | [ ] |
-| A new career starts and the tutorial plays through | [ ] | [ ] | [ ] |
-| A league match plays to the end | [ ] | [ ] | [ ] |
-| The career saves to its folder: Lite the original game's `BESLES-54151-G`, Full `-F`, Max `-M` | [ ] | [ ] | [ ] |
-| The save loads and the career carries on | [ ] | [ ] | [ ] |
-| VS data saves to its folder: Lite `-C`, Full and Max `-V` | [ ] | [ ] | [ ] |
-| The widescreen `.pnach` loads under the edition's CRC and the match is widened | [ ] | [ ] | [ ] |
-| A career from the last version carries on, unless the CHANGELOG says it needs a new career | [ ] | [ ] | [ ] |
-
 ## All three editions (Lite, Full and Max)
 
 - [ ] **The travelling salesman's special training coach.** In a
