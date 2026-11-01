@@ -35,7 +35,11 @@ Patches go on the GitHub release.
 
 While the major number is 0 the mod is still in testing, and any
 release may change things. 1.0.0 is the first release you'd call
-finished, so until then a change that would be MAJOR (a save break, new
+finished: Nexxus's call, made when the testing, the features and the
+reverse engineering feel essentially complete, not a checklist. One
+thing is required whatever else is left: every switch works on the
+Japanese release (SLPM-66316) too (Nexxus's choice, 2026-11-01; the
+work is in LMAST-Reverse's `TODO.md` section 8). Until then a change that would be MAJOR (a save break, new
 save folders) bumps MINOR instead: 0.1.0 → 0.2.0, never 1.0.0. Git tags are the version with a `v`: `v0.1.0-beta.1`.
 
 Until a version is final, each new test build of it only bumps the
