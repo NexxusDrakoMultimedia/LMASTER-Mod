@@ -22,7 +22,7 @@ Writes build/ (scratch, git-ignored) and dist/ (git-ignored):
         LMASTER-Mod-<version>-Full.xdelta
         LMASTER-Mod-<version>-Lite.xdelta
         widescreen/SLES-54151_<CRC>.pnach   one per edition, comments stripped
-        README.md  CHANGELOG.md  LICENSE
+        README.md  CHANGELOG.md  TESTING.md  LICENSE
         HASHES.txt   the disc players need, and what each patch makes
         SHA256SUMS   sha256sum -c format, for the files in the folder
     dist/LMASTER-Mod-<version>.zip         that folder, zipped
@@ -49,7 +49,7 @@ SEMVER = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)"
                     r"(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)"
                     r"(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?"
                     r"(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$")
-PLAYER_DOCS = ("README.md", "CHANGELOG.md", "LICENSE")
+PLAYER_DOCS = ("README.md", "CHANGELOG.md", "TESTING.md", "LICENSE")
 VANILLA_CRC = "3CB245D5"
 # PCSX2's copy of the widescreen patch (the same writes as PNACH/'s, with
 # PCSX2's game title and author); its // comments are stripped on release.
@@ -117,6 +117,18 @@ def check_changelog(version):
     with open(os.path.join(ROOT, "CHANGELOG.md"), encoding="utf-8") as f:
         if "## [%s]" % version not in f.read():
             fail("CHANGELOG.md has no '## [%s]' section; add one before releasing" % version)
+
+
+def check_testing(version, cfg):
+    # TESTING.md's opening names the version and the LMAST-Reverse commit
+    # its checks were brought up to date for.
+    with open(os.path.join(ROOT, "TESTING.md"), encoding="utf-8") as f:
+        text = f.read()
+    if "**LMASTER Mod %s**" % version not in text:
+        fail("TESTING.md isn't for version %s; update it before releasing" % version)
+    if "/commit/%s" % cfg["source"]["commit"] not in text:
+        fail("TESTING.md doesn't name LMAST-Reverse %s; update it before releasing"
+             % cfg["source"]["commit"][:7])
 
 
 def check_source(cfg, allow_dirty):
@@ -313,6 +325,7 @@ def main(argv):
     vanilla_path = os.path.abspath(args[0])
     cfg, version = load_config()
     check_changelog(version)
+    check_testing(version, cfg)
     repo, head = check_source(cfg, "--allow-dirty" in flags)
     vanilla = check_vanilla(vanilla_path, cfg)
     vanilla_exe = executable(vanilla_path, repo)

@@ -203,6 +203,8 @@ and tell us:
 
 Reports that a change works are just as useful, especially for the ones
 marked *(needs extra testing)* in the [changelog](CHANGELOG.md).
+[TESTING.md](TESTING.md) lists what each edition still needs tested,
+and what to look for.
 
 ---
 

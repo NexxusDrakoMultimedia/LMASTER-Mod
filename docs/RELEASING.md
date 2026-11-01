@@ -12,8 +12,9 @@ For the maintainer. Players want the [README](../README.md).
 | `VERSION` | the release's version, one line |
 | `release.toml` | the LMAST-Reverse commit to build from, the vanilla disc's hashes, and the editions with their `patch_disc.py --mod` groups |
 | `CHANGELOG.md` | what each release changes, in players' words ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/)) |
+| `TESTING.md` | what each edition still needs tested in PCSX2, for the current version |
 | `tools/build_release.py` | builds, checks, hashes and zips a release |
-| `README.md`, `CHANGELOG.md`, `LICENSE` | copied into every release zip |
+| `README.md`, `CHANGELOG.md`, `TESTING.md`, `LICENSE` | copied into every release zip |
 | `docs/social/` | the opening posts of the mod's Discord and Neoseeker threads |
 
 The mod's code lives in LMAST-Reverse; this repo only decides **which
@@ -62,12 +63,21 @@ CHANGELOG section and a line in the README's saves section.
    at the bottom. Write for players: what they'll notice, not addresses.
    Note which edition has each change, and mark anything not yet tested
    in PCSX2 *(needs extra testing)*; drop the mark once a test confirms it.
-4. **Update the README**: the version (it appears in file names
+4. **Update `TESTING.md`.** Set the version and the LMAST-Reverse
+   commit in its opening lines (the build refuses to run if either
+   doesn't match `VERSION` and `release.toml`). Then bring its checks up
+   to date from LMAST-Reverse at that commit, never from memory: the
+   LMASTER and widescreen sections of its `TESTING.md`, and every row of
+   `DOC/LMASTER_MOD.md`'s status that isn't yet tested in the game. Drop
+   checks that have been confirmed since, add one for each new
+   *(needs extra testing)* change, and file each under the editions
+   that have it (the switch-level table in `LMASTER_MOD.md` says which).
+5. **Update the README**: the version (it appears in file names
    throughout), any step that changes, and each edition's PCSX2 CRC in the
    widescreen table and "Things to know". The CRCs change whenever an
    edition changes the game's program; take them from `HASHES.txt` after
    a first build, then build again.
-5. **Build:**
+6. **Build:**
 
    ```bash
    python tools/build_release.py "<path to the Redump .iso>"
@@ -75,14 +85,16 @@ CHANGELOG section and a line in the README's saves section.
 
    It refuses to build if the disc isn't the Redump dump, LMAST-Reverse
    isn't at the pinned commit or has uncommitted changes, `VERSION` isn't
-   a valid semantic version, or an edition includes a test-only switch
-   (`skip-tutorial`, `launcher`). For each edition it builds the disc,
+   a valid semantic version, `CHANGELOG.md` has no section for it,
+   `TESTING.md` names another version or commit, or an edition includes
+   a test-only switch (`skip-tutorial`, `launcher`). For each edition it builds the disc,
    makes the patch, re-applies the patch and checks the result matches
    the built disc, and, if `xdelta3` is installed, applies it with
    xdelta3 too. `--keep-isos` keeps the built discs in `build/` for
    testing in PCSX2. The log is `build/build.log`.
-6. **Test** every edition in PCSX2: boot, start a career, save, load.
-7. **Commit and tag:**
+7. **Test** every edition in PCSX2: the "Every release, every edition"
+   table in [`TESTING.md`](../TESTING.md).
+8. **Commit and tag:**
 
    ```bash
    git commit -am "Release 0.1.0-beta.1"
@@ -90,7 +102,7 @@ CHANGELOG section and a line in the README's saves section.
    git push origin main v0.1.0-beta.1
    ```
 
-8. **Publish** a GitHub release from the tag, attaching
+9. **Publish** a GitHub release from the tag, attaching
    `dist/LMASTER-Mod-<version>.zip` and its `.sha256`. Paste that
    version's CHANGELOG section as the notes. Tick **Set as a pre-release**
    for a `-beta` version.
@@ -99,12 +111,12 @@ CHANGELOG section and a line in the README's saves section.
    gh release create v0.1.0-beta.1 dist/LMASTER-Mod-0.1.0-beta.1.zip dist/LMASTER-Mod-0.1.0-beta.1.zip.sha256 --prerelease --title "LMASTER Mod 0.1.0-beta.1 (testing)" --notes-file <notes.md>
    ```
 
-9. **Announce** it once the release is up, so the links work: an update
-   post on Discord and in the Neoseeker thread, from the CHANGELOG
-   section, with any save warning first. Update the Neoseeker opening
-   post's version line, and the opening posts in
-   [`docs/social/`](social/README.md) if the release changes what they
-   say.
+10. **Announce** it once the release is up, so the links work: an update
+    post on Discord and in the Neoseeker thread, from the CHANGELOG
+    section, with any save warning first. Update the Neoseeker opening
+    post's version line, and the opening posts in
+    [`docs/social/`](social/README.md) if the release changes what they
+    say.
 
 ## Adding an edition
 
