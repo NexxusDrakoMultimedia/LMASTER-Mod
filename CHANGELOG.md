@@ -18,6 +18,12 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+### Changed (Lite, Full and Max)
+
+- **Smaller widescreen patches.** Each edition's `.pnach` is now
+  PCSX2's own copy of the patch with the developer comments left out:
+  about 4 KB instead of 22 KB, with the same changes to the game.
+
 ## [0.3.0] - 2026-11-01
 
 Built from LMAST-Reverse commit

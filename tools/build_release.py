@@ -21,7 +21,7 @@ Writes build/ (scratch, git-ignored) and dist/ (git-ignored):
     dist/LMASTER-Mod-<version>/            the folder players get
         LMASTER-Mod-<version>-Full.xdelta
         LMASTER-Mod-<version>-Lite.xdelta
-        widescreen/SLES-54151_<CRC>.pnach   one per edition
+        widescreen/SLES-54151_<CRC>.pnach   one per edition, comments stripped
         README.md  CHANGELOG.md  LICENSE
         HASHES.txt   the disc players need, and what each patch makes
         SHA256SUMS   sha256sum -c format, for the files in the folder
@@ -51,9 +51,13 @@ SEMVER = re.compile(r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)"
                     r"(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$")
 PLAYER_DOCS = ("README.md", "CHANGELOG.md", "LICENSE")
 VANILLA_CRC = "3CB245D5"
-WIDESCREEN = os.path.join("PNACH", "SLES-54151_%s.pnach" % VANILLA_CRC)
+# PCSX2's copy of the widescreen patch (the same writes as PNACH/'s, with
+# PCSX2's game title and author); its // comments are stripped on release.
+WIDESCREEN = os.path.join("PNACH", "pcsx2", "SLES-54151_%s.pnach" % VANILLA_CRC)
 PNACH_WRITE = re.compile(r"^patch=\d+,EE,([0-9a-fA-F]+),(byte|short|word|double|bytes),([0-9a-fA-F]+)")
 PNACH_SIZES = {"byte": 1, "short": 2, "word": 4, "double": 8}
+# A // at a line's start or after a space, so a URL's :// is left alone.
+PNACH_COMMENT = re.compile(r"(^|\s)//.*")
 
 
 def fail(msg):
@@ -189,12 +193,25 @@ def pnach_writes(text):
     return out
 
 
+def strip_comments(text):
+    """The .pnach without its // comments, whole-line or trailing, and with
+    the blank lines they leave squeezed to one."""
+    lines = []
+    for line in text.splitlines():
+        line = PNACH_COMMENT.sub("", line).rstrip()
+        if line or (lines and lines[-1]):
+            lines.append(line)
+    while lines and not lines[-1]:
+        lines.pop()
+    return "\n".join(lines) + "\n"
+
+
 def write_widescreen(vanilla_exe, iso, crc, repo, out_dir):
     """The widescreen patch under the edition's CRC, if none of its writes is
     at or within 64 bytes of a byte the edition changed; returns the line
     HASHES.txt gives it."""
     with open(os.path.join(repo, WIDESCREEN), encoding="utf-8") as f:
-        text = f.read()
+        text = strip_comments(f.read())
     changed = changed_addresses(vanilla_exe, executable(iso, repo))
     writes = pnach_writes(text)
     clash = sorted(a for a in changed for lo, hi in writes if lo - 64 <= a < hi + 64)
