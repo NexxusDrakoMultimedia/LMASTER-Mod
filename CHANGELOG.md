@@ -24,6 +24,8 @@ Built from LMAST-Reverse commit
 [`8e45df4`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/8e45df4306a0cb1b8ee43eed582bdce9a0104916).
 How each change works, and how it was tested, is in that commit's
 [LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/DOC/LMASTER_MOD.md).
+Full and Max's pictures are from LMAST-Realism commit
+[`0921c0f`](https://github.com/NexxusDrakoMultimedia/LMAST-Realism/commit/0921c0fcd6c8720d3a89bdbc1993dfcb280779fc).
 
 No new career needed: the new pictures and the widescreen change don't
 touch your save, so careers from 0.3.0 carry on, in every edition.

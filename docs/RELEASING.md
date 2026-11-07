@@ -10,7 +10,7 @@ For the maintainer. Players want the [README](../README.md).
 | File | Holds |
 |---|---|
 | `VERSION` | the release's version, one line |
-| `release.toml` | the LMAST-Reverse commit to build from, the vanilla disc's hashes, and the editions with their `patch_disc.py --mod` groups |
+| `release.toml` | the LMAST-Reverse and LMAST-Realism commits to build from, the vanilla disc's hashes, and the editions with their `patch_disc.py --mod` groups |
 | `CHANGELOG.md` | what each release changes, in players' words ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/)) |
 | `TESTING.md` | what each edition still needs tested in PCSX2, for the current version |
 | `tools/build_release.py` | builds, checks, hashes and zips a release |
@@ -55,7 +55,10 @@ CHANGELOG section and a line in the README's saves section.
    first, so the release links to code anyone can see. Put its full hash
    in `release.toml` under `[source] commit`, and in the README's links
    to LMAST-Reverse's `DOC/LMASTER_MOD.md`, so they show the version of
-   that document this release was built from.
+   that document this release was built from. Do the same for
+   LMAST-Realism under `[realism] commit`, if its pictures have changed:
+   the build refuses to run unless the clone beside LMAST-Reverse is at
+   that commit, and stops if an edition leaves the pictures out.
 2. **Set the version** in `VERSION`.
 3. **Update `CHANGELOG.md`.** Move what's under `## [Unreleased]` into a
    new `## [<version>] - <YYYY-MM-DD>` section (the build refuses to run

@@ -143,6 +143,24 @@ def check_source(cfg, allow_dirty):
     return repo, head
 
 
+def check_realism(cfg, repo, allow_dirty):
+    """The LMAST-Realism commit release.toml pins, or None without [realism]."""
+    if "realism" not in cfg:
+        return None
+    pack = os.path.normpath(os.path.join(ROOT, cfg["realism"]["path"]))
+    # patch_disc.py looks for the pack beside LMAST-Reverse, not where we say.
+    if pack != os.path.normpath(os.path.join(repo, "..", "LMAST-Realism")):
+        fail("release.toml [realism] path must be LMAST-Realism beside LMAST-Reverse")
+    if not os.path.isdir(os.path.join(pack, ".git")):
+        fail("no LMAST-Realism checkout at %s (release.toml [realism])" % pack)
+    head = git(pack, "rev-parse", "HEAD")
+    if head != cfg["realism"]["commit"]:
+        fail("LMAST-Realism is at %s, release.toml pins %s" % (head[:12], cfg["realism"]["commit"][:12]))
+    if git(pack, "status", "--porcelain", "--untracked-files=no") and not allow_dirty:
+        fail("LMAST-Realism has uncommitted changes; commit them or pass --allow-dirty")
+    return head
+
+
 def check_vanilla(path, cfg):
     print("Checking the vanilla disc %s" % path)
     want = cfg["vanilla"]
@@ -250,6 +268,8 @@ def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep,
     py = sys.executable
     out = run([py, "SRC/patch_disc.py", "patch", vanilla, iso, "--mod", ed["mod"]] + args,
               repo, log)
+    if "realism skipped" in out:
+        fail("%s left LMAST-Realism's pictures out" % ed["name"])
     crc = re.search(r"PCSX2 CRC of the executable ([0-9A-F]{8})", out)
     built = hashes(iso, tag + ".iso")
     run([py, "SRC/vcdiff.py", "make", vanilla, iso, patch], repo, log)
@@ -268,11 +288,15 @@ def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep,
             "pcsx2_crc": pcsx2_crc, "widescreen": ws}
 
 
-def write_hashes(path, version, vanilla, results, head, cfg):
+def write_hashes(path, version, vanilla, results, head, realism, cfg):
     v = cfg["vanilla"]
     lines = ["LMASTER Mod %s" % version, "",
              "Built from LMAST-Reverse commit %s" % head,
-             "(%s/commit/%s)" % (cfg["source"]["upstream"], head), "",
+             "(%s/commit/%s)" % (cfg["source"]["upstream"], head)]
+    if realism:
+        lines += ["with LMAST-Realism commit %s" % realism,
+                  "(%s/commit/%s)" % (cfg["realism"]["upstream"], realism)]
+    lines += ["",
              "THE DISC YOU NEED (before patching)",
              "  %s" % v["name"], "  Redump: %s" % v["redump"]]
     lines += ["  %-8s %s" % (k, vanilla[k] if k != "size" else "{:,} bytes".format(vanilla[k]))
@@ -327,6 +351,7 @@ def main(argv):
     check_changelog(version)
     check_testing(version, cfg)
     repo, head = check_source(cfg, "--allow-dirty" in flags)
+    realism = check_realism(cfg, repo, "--allow-dirty" in flags)
     vanilla = check_vanilla(vanilla_path, cfg)
     vanilla_exe = executable(vanilla_path, repo)
 
@@ -339,12 +364,13 @@ def main(argv):
 
     start = time.time()
     with open(os.path.join(build, "build.log"), "w", encoding="utf-8") as log:
-        log.write("LMASTER Mod %s from LMAST-Reverse %s\n\n" % (version, head))
+        log.write("LMASTER Mod %s from LMAST-Reverse %s%s\n\n"
+                  % (version, head, ", LMAST-Realism %s" % realism if realism else ""))
         results = [build_edition(ed, version, vanilla_path, vanilla_exe, repo, build, out_dir,
                                  "--keep-isos" in flags, log) for ed in cfg["edition"]]
     for name in PLAYER_DOCS:
         shutil.copy2(os.path.join(ROOT, name), out_dir)
-    write_hashes(os.path.join(out_dir, "HASHES.txt"), version, vanilla, results, head, cfg)
+    write_hashes(os.path.join(out_dir, "HASHES.txt"), version, vanilla, results, head, realism, cfg)
     write_sha256sums(out_dir)
     zpath = zip_folder(out_dir)
     print("\nDone in %.0f min: %s" % ((time.time() - start) / 60, os.path.relpath(zpath, ROOT)))

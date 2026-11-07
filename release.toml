@@ -12,6 +12,14 @@ lmast_reverse = "../LMAST-Reverse"
 commit = "8e45df4306a0cb1b8ee43eed582bdce9a0104916"
 upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Reverse"
 
+[realism]
+# The LMAST-Realism checkout whose pictures --mod realism (in lmaster-full
+# and lmaster-max) puts on the disc, and the commit a release must use.
+# patch_disc.py finds it beside LMAST-Reverse, so it must be there.
+path = "../LMAST-Realism"
+commit = "0921c0fcd6c8720d3a89bdbc1993dfcb280779fc"
+upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Realism"
+
 [vanilla]
 # The only disc image the patches apply to: Redump disc 12334, SLES-54151 v1.01.
 name = "Let's Make a Soccer Team! (Europe, Australia) (En,Fr,De,Es,It).iso"
