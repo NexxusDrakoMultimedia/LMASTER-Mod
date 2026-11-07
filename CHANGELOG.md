@@ -18,6 +18,18 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-11-07
+
+Built from the same LMAST-Reverse commit as 0.3.0,
+[`d745fd7`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d745fd7cb32af45a838c21a4d731bf9a55c6624d),
+so the game itself is unchanged: the xdelta patches make the same discs,
+with the same PCSX2 CRCs, and careers from 0.3.0 carry on.
+
+### Added
+
+- **TESTING.md** in the download: what each edition still needs tested
+  in PCSX2, and how to help.
+
 ### Changed (Lite, Full and Max)
 
 - **Smaller widescreen patches.** Each edition's `.pnach` is now
@@ -417,7 +429,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.3...v0.1.0

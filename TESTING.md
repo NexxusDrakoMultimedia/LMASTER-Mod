@@ -8,7 +8,7 @@ edition. The tools prove each patch writes the right bytes, but not that
 the game does what we think with them. Anyone with the game and PCSX2
 can help, and no code is needed.
 
-This list is for **LMASTER Mod 0.3.0**, built from LMAST-Reverse commit
+This list is for **LMASTER Mod 0.3.1**, built from LMAST-Reverse commit
 [`d745fd7`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d745fd7cb32af45a838c21a4d731bf9a55c6624d).
 Its checks come from LMAST-Reverse's own
 [`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e17e23/TESTING.md)

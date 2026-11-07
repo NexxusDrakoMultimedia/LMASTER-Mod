@@ -14,7 +14,7 @@ challenge. The full list is in [CHANGELOG.md](CHANGELOG.md). How each
 change works, with what's been tested, is in LMAST-Reverse's
 [LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d745fd7cb32af45a838c21a4d731bf9a55c6624d/DOC/LMASTER_MOD.md).
 
-> **Version 0.3.0.** Some changes still need more testing in real games
+> **Version 0.3.1.** Some changes still need more testing in real games
 > (they're marked in the changelog). Keep a copy of your original disc
 > image and your memory card, and please tell us what you find (see
 > [Reporting a problem](#reporting-a-problem)).
@@ -59,7 +59,7 @@ the disc for each.
    - Windows: **Delta Patcher** (recommended) or **xdelta UI**.
    - Mac or Linux: **xdelta3** (in most package managers, for example
      `brew install xdelta` or `sudo apt install xdelta3`).
-4. **This mod's files**: `LMASTER-Mod-0.3.0.zip` from the
+4. **This mod's files**: `LMASTER-Mod-0.3.1.zip` from the
    [Releases page](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases).
    Unzip it anywhere.
 
@@ -95,8 +95,8 @@ it for future versions of the mod.
 
 1. Open Delta Patcher.
 2. **Original file:** choose your `.iso`.
-3. **XDelta patch:** choose `LMASTER-Mod-0.3.0-Lite.xdelta`,
-   `LMASTER-Mod-0.3.0-Full.xdelta` or `LMASTER-Mod-0.3.0-Max.xdelta`.
+3. **XDelta patch:** choose `LMASTER-Mod-0.3.1-Lite.xdelta`,
+   `LMASTER-Mod-0.3.1-Full.xdelta` or `LMASTER-Mod-0.3.1-Max.xdelta`.
 4. Click the cog icon and **untick "Backup original file"** if you
    already made a copy (it saves several GB). Click **Apply patch**.
 5. Wait. The disc is big, so this can take a minute or two. Delta
@@ -106,7 +106,7 @@ it for future versions of the mod.
 **With xdelta3 (Mac, Linux or Windows command line):**
 
 ```bash
-xdelta3 -d -s "original.iso" "LMASTER-Mod-0.3.0-Full.xdelta" "LMASTER Full.iso"
+xdelta3 -d -s "original.iso" "LMASTER-Mod-0.3.1-Full.xdelta" "LMASTER Full.iso"
 ```
 
 **"The file you are trying to patch is not the right one"** means your
@@ -197,7 +197,7 @@ Found a bug, a crash, or something that doesn't look right? Please
 [open an issue](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues)
 and tell us:
 
-- which edition (Lite, Full or Max) and version (0.3.0),
+- which edition (Lite, Full or Max) and version (0.3.1),
 - what you were doing, and what happened,
 - a screenshot if you can.
 

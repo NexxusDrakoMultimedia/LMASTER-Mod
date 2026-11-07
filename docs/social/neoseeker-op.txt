@@ -1,7 +1,7 @@
 [div align=center][b][size=4]LMASTER Mod[/size][/b]
 [i]A fan-made fix-and-restore mod for Let's Make a Soccer Team! on PlayStation 2 (European release)[/i]
 
-[b]Current version: 0.3.0[/b] (2026-11-01)
+[b]Current version: 0.3.1[/b] (2026-11-07)
 [link name=Download]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/latest[/link] · [link name=Changelog]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/blob/main/CHANGELOG.md[/link] · [link name=Full instructions (README)]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod#readme[/link] · [link name=Report a problem]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues[/link][/div]
 
 [b][size=3]What is it?[/size][/b]
