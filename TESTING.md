@@ -8,14 +8,13 @@ edition. The tools prove each patch writes the right bytes, but not that
 the game does what we think with them. Anyone with the game and PCSX2
 can help, and no code is needed.
 
-This list is for **LMASTER Mod 0.3.1**, built from LMAST-Reverse commit
-[`d745fd7`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d745fd7cb32af45a838c21a4d731bf9a55c6624d).
-Its checks come from LMAST-Reverse's own
-[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e17e23/TESTING.md)
-and the status column of
-[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e17e23/DOC/LMASTER_MOD.md#status),
-as of commit `8e17e23`, which changes no mod code since `d745fd7`. The
-mod's code and its full test history live there; this file picks out
+This list is for **LMASTER Mod 0.4.0**, built from LMAST-Reverse commit
+[`8e45df4`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/8e45df4306a0cb1b8ee43eed582bdce9a0104916).
+Its checks come from that commit's own
+[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/TESTING.md)
+and the status column of its
+[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/DOC/LMASTER_MOD.md#status).
+The mod's code and its full test history live there; this file picks out
 what the three editions players download still need.
 
 ## How to take part

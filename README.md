@@ -12,9 +12,9 @@ below each second division and the real names and grounds of the
 2005-06 season, and Max also makes the economy and injuries more of a
 challenge. The full list is in [CHANGELOG.md](CHANGELOG.md). How each
 change works, with what's been tested, is in LMAST-Reverse's
-[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d745fd7cb32af45a838c21a4d731bf9a55c6624d/DOC/LMASTER_MOD.md).
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/DOC/LMASTER_MOD.md).
 
-> **Version 0.3.1.** Some changes still need more testing in real games
+> **Version 0.4.0.** Some changes still need more testing in real games
 > (they're marked in the changelog). Keep a copy of your original disc
 > image and your memory card, and please tell us what you find (see
 > [Reporting a problem](#reporting-a-problem)).
@@ -31,6 +31,7 @@ change works, with what's been tested, is in LMAST-Reverse's
 | Restored "two months" and "nine months" injury lines | | ✅ | ✅ |
 | Real names of leagues, competitions, clubs, nations and grounds (2005-06) | | ✅ | ✅ |
 | Grounds of their real size, with more varied sponsor boards | | ✅ | ✅ |
+| LMAST Realism's crests, badges and match pictures on the disc | | ✅ | ✅ |
 | Harder economy (dearer facilities, smaller late-game income) | | | ✅ |
 | Balance changes (injuries, transfers, reputation, fans, merchandise, PR, camps, tours) | | | ✅ |
 | Saves | Your existing saves | Its own saves; new career | Its own saves; new career |
@@ -59,7 +60,7 @@ the disc for each.
    - Windows: **Delta Patcher** (recommended) or **xdelta UI**.
    - Mac or Linux: **xdelta3** (in most package managers, for example
      `brew install xdelta` or `sudo apt install xdelta3`).
-4. **This mod's files**: `LMASTER-Mod-0.3.1.zip` from the
+4. **This mod's files**: `LMASTER-Mod-0.4.0.zip` from the
    [Releases page](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases).
    Unzip it anywhere.
 
@@ -95,8 +96,8 @@ it for future versions of the mod.
 
 1. Open Delta Patcher.
 2. **Original file:** choose your `.iso`.
-3. **XDelta patch:** choose `LMASTER-Mod-0.3.1-Lite.xdelta`,
-   `LMASTER-Mod-0.3.1-Full.xdelta` or `LMASTER-Mod-0.3.1-Max.xdelta`.
+3. **XDelta patch:** choose `LMASTER-Mod-0.4.0-Lite.xdelta`,
+   `LMASTER-Mod-0.4.0-Full.xdelta` or `LMASTER-Mod-0.4.0-Max.xdelta`.
 4. Click the cog icon and **untick "Backup original file"** if you
    already made a copy (it saves several GB). Click **Apply patch**.
 5. Wait. The disc is big, so this can take a minute or two. Delta
@@ -106,7 +107,7 @@ it for future versions of the mod.
 **With xdelta3 (Mac, Linux or Windows command line):**
 
 ```bash
-xdelta3 -d -s "original.iso" "LMASTER-Mod-0.3.1-Full.xdelta" "LMASTER Full.iso"
+xdelta3 -d -s "original.iso" "LMASTER-Mod-0.4.0-Full.xdelta" "LMASTER Full.iso"
 ```
 
 **"The file you are trying to patch is not the right one"** means your
@@ -186,10 +187,13 @@ edition's new name; that patch only works on the original disc.
   `HASHES.txt`).
 - Some changes show up only at certain times. The season plan, for
   example, can only be set at the start of a season.
-- **Real logos and texture fixes aren't part of LMASTER.** They
-  belong to the sister project
-  [LMAST-Realism](https://github.com/NexxusDrakoMultimedia/LMAST-Realism).
-  LMASTER only fixes and changes how the game plays.
+- **Full and Max have the crests, badges and match pictures of the
+  sister project
+  [LMAST-Realism](https://github.com/NexxusDrakoMultimedia/LMAST-Realism)
+  on the disc**, so they show without PCSX2's texture replacement. Its
+  kits, and the league logos on the menus and in the opening film,
+  aren't on the disc: for those, use the Realism pack in PCSX2 as
+  before. Lite has none of Realism's pictures.
 
 ## Reporting a problem
 
@@ -197,7 +201,7 @@ Found a bug, a crash, or something that doesn't look right? Please
 [open an issue](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues)
 and tell us:
 
-- which edition (Lite, Full or Max) and version (0.3.1),
+- which edition (Lite, Full or Max) and version (0.4.0),
 - what you were doing, and what happened,
 - a screenshot if you can.
 
@@ -245,4 +249,4 @@ is not covered by this license and remains SEGA's.
 How releases are built and numbered: [docs/RELEASING.md](docs/RELEASING.md).
 The editions, groups and switches this release is built from are
 described in LMAST-Reverse's
-[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d745fd7cb32af45a838c21a4d731bf9a55c6624d/DOC/LMASTER_MOD.md#the-switch-levels).
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/DOC/LMASTER_MOD.md#the-switch-levels).

@@ -1,12 +1,12 @@
 [div align=center][b][size=4]LMASTER Mod[/size][/b]
 [i]A fan-made fix-and-restore mod for Let's Make a Soccer Team! on PlayStation 2 (European release)[/i]
 
-[b]Current version: 0.3.1[/b] (2026-11-07)
+[b]Current version: 0.4.0[/b] (2026-11-08)
 [link name=Download]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/latest[/link] · [link name=Changelog]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/blob/main/CHANGELOG.md[/link] · [link name=Full instructions (README)]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod#readme[/link] · [link name=Report a problem]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues[/link][/div]
 
 [b][size=3]What is it?[/size][/b]
 
-LMASTER fixes bugs [i]Let's Make a Soccer Team![/i] shipped with and brings back features that were switched off or cut. The Full and Max editions go further: a hidden third tier below each second division, the real names and grounds of the 2005-06 season, and (in Max) a tougher economy.
+LMASTER fixes bugs [i]Let's Make a Soccer Team![/i] shipped with and brings back features that were switched off or cut. The Full and Max editions go further: a hidden third tier below each second division, the real names and grounds of the 2005-06 season, the crests and pictures of LMAST-Realism, and (in Max) a tougher economy.
 
 It comes as small patch files you apply to your own disc image of the game. The mod contains none of the game's files.
 
@@ -37,6 +37,7 @@ You can have all three: patch a copy of the disc for each. Full and Max keep the
 [li][b]A third tier[/b] in every nation, played out of sight, with promotion and relegation. Finish last in the second division and it's game over.
 [li][b]Real names[/b] of leagues, competitions, clubs, nations and national teams as of 2005-06, in all five languages.
 [li][b]Real grounds[/b]: every club at its 2005-06 stadium, with its real name and about its real size. Your stadium is named after you.
+[li][b]Realism's pictures on the disc[/b]: the club crests, competition badges and match pictures of LMAST-Realism, with no texture pack needed.
 [li]Fairer league fixtures, more varied sponsor boards, and the cut "two months" and "nine months" injury lines.
 [/ul]
 
@@ -77,7 +78,7 @@ If the patcher says the file isn't the right one, your disc image doesn't match:
 [li]Savestates don't carry over between the original and a patched disc. Save to the memory card in-game.
 [li]PCSX2 sees each patched disc as a different game, so per-game settings and other patches for the original won't load on it automatically.
 [li]Real PS2s: the patched image is a normal PS2 disc image, so it should work on a modded PS2 in principle, but that isn't tested or supported. Tell us if you try!
-[li]Real logos and texture fixes aren't part of LMASTER. They belong to the sister project [link name=LMAST-Realism]https://github.com/NexxusDrakoMultimedia/LMAST-Realism[/link]. LMASTER's real names match its logos and kits.
+[li]Full and Max carry the crests, badges and match pictures of the sister project [link name=LMAST-Realism]https://github.com/NexxusDrakoMultimedia/LMAST-Realism[/link] on the disc. Its kits and the menu league logos still come from the Realism pack in PCSX2, and LMASTER's real names match them.
 [/ul]
 
 [b][size=3]Reporting a problem[/size][/b]

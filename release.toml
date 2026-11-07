@@ -9,7 +9,7 @@
 # to this repo's root, and the commit a release must be built from. Bump
 # the commit when a new release picks up newer LMAST-Reverse code.
 lmast_reverse = "../LMAST-Reverse"
-commit = "d745fd7cb32af45a838c21a4d731bf9a55c6624d"
+commit = "8e45df4306a0cb1b8ee43eed582bdce9a0104916"
 upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Reverse"
 
 [vanilla]

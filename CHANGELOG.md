@@ -18,20 +18,40 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
-## [0.3.1] - 2026-11-07
+## [0.4.0] - 2026-11-08
 
-Built from the same LMAST-Reverse commit as 0.3.0,
-[`d745fd7`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d745fd7cb32af45a838c21a4d731bf9a55c6624d),
-so the game itself is unchanged: the xdelta patches make the same discs,
-with the same PCSX2 CRCs, and careers from 0.3.0 carry on.
+Built from LMAST-Reverse commit
+[`8e45df4`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/8e45df4306a0cb1b8ee43eed582bdce9a0104916).
+How each change works, and how it was tested, is in that commit's
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/DOC/LMASTER_MOD.md).
 
-### Added
+No new career needed: the new pictures and the widescreen change don't
+touch your save, so careers from 0.3.0 carry on, in every edition.
+
+### Added (Full and Max)
+
+- **LMAST Realism's pictures in the game itself.** The club crests,
+  competition badges, mini logos in the lists and match pictures of
+  [LMAST Realism](https://github.com/NexxusDrakoMultimedia/LMAST-Realism)
+  are now on the disc, so they show without PCSX2's texture replacement.
+  The game keeps a crest in 16 colours, so a crest has a little less
+  detail than with the pack on top of PCSX2. The licensed Italian,
+  Spanish and Dutch clubs' own crests, which Realism doesn't redraw, are
+  scaled down a little to leave a thin clear edge, like Realism's.
+  Left out: the kits (they stay in the pack, for PCSX2), and the league
+  logos on the menu screens and the opening film, which the game keeps in
+  a kind of file the tools can't write yet.
+
+### Added (Lite, Full and Max)
 
 - **TESTING.md** in the download: what each edition still needs tested
   in PCSX2, and how to help.
 
 ### Changed (Lite, Full and Max)
 
+- **Widescreen: the newspaper headlines stretch across the page.** The
+  opening film's newspaper pages already had their pictures widened; the
+  headline text on them is now widened too, instead of staying narrow.
 - **Smaller widescreen patches.** Each edition's `.pnach` is now
   PCSX2's own copy of the patch with the developer comments left out:
   about 4 KB instead of 22 KB, with the same changes to the game.
@@ -162,7 +182,7 @@ sections below show how 0.1.0 got here.
   brackets have their byes in the first round only, and the game's rules
   texts now describe the third tier.
 
-### Added
+### Added (Lite, Full and Max)
 
 - **A third tier** (Full and Max). Every nation now has a third
   division, played out of sight: English League 1, French League
@@ -429,8 +449,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.1...HEAD
-[0.3.1]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...v0.3.1
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0-beta.3...v0.1.0
