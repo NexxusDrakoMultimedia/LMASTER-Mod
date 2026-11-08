@@ -3,6 +3,8 @@
 
 # LMASTER Mod
 
+[![AI:X (AI made) on the 0RWX scale](https://0rwx.com/static/AI-X.png)](#ai-use)
+
 **A fan-made fix-and-restore mod for *Let's Make a Soccer Team!* on
 PlayStation 2 (European release).**
 
@@ -228,6 +230,20 @@ and what to look for.
 - Disc fingerprints from [Redump](https://redump.info/).
 
 See [CREDITS.md](CREDITS.md) for more.
+
+## AI use
+
+LMASTER Mod is **AI:X** ("AI made") on the [0RWX scale](https://0rwx.com/),
+a simple way of saying how much of a work AI made, modelled on Unix
+file permissions. X is the highest of its four levels: AI can read,
+write *and* execute the work, and the human's role is to curate it.
+
+The reverse engineering, the patches and these documents were made with
+Claude (Anthropic) through the
+[LMAST-Reverse](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse)
+project. Pyra Drake decides what the mod changes, directs the work, and
+tests the changes in real games. The AI:X logo is by Namtao Productions,
+released into the public domain.
 
 ## Disclaimer
 

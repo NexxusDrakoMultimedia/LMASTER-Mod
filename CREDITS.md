@@ -13,6 +13,8 @@ Every change in the mod comes from the
 project, which documents how the game works and builds the patches. Its
 `DOC/LMASTER_MOD.md` holds the evidence and test results for each
 change. The reverse engineering was done with Claude (Anthropic).
+The mod is declared **AI:X** ("AI made") on the
+[0RWX scale](https://0rwx.com/); see "AI use" in the README.
 
 The widescreen patches are LMAST-Reverse's
 `PNACH/SLES-54151_3CB245D5.pnach`, renamed for each edition.
