@@ -166,8 +166,8 @@ the middle of the screen. The intro and event movies stay stretched.
 | Edition | Widescreen file |
 |---|---|
 | Lite | `SLES-54151_CF8C34C0.pnach` |
-| Full | `SLES-54151_E988B681.pnach` |
-| Max | `SLES-54151_BFCEA7C3.pnach` |
+| Full | `SLES-54151_E7B0E4D4.pnach` |
+| Max | `SLES-54151_B1F6F596.pnach` |
 
 1. In PCSX2, open **Tools → Open Data Directory**, then the `patches`
    folder (create it if it isn't there).
@@ -186,7 +186,7 @@ edition's new name; that patch only works on the original disc.
 - **PCSX2 sees each patched disc as a different game.** Your per-game
   settings and any other `.pnach` cheats or patches for the original
   won't load on it automatically. The original's code is `3CB245D5`;
-  Lite's is `CF8C34C0`, Full's `E988B681` and Max's `BFCEA7C3` (also in
+  Lite's is `CF8C34C0`, Full's `E7B0E4D4` and Max's `B1F6F596` (also in
   `HASHES.txt`).
 - Some changes show up only at certain times. The season plan, for
   example, can only be set at the start of a season.
