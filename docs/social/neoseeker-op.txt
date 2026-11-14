@@ -79,7 +79,7 @@ If the patcher says the file isn't the right one, your disc image doesn't match:
 [li]Savestates don't carry over between the original and a patched disc. Save to the memory card in-game.
 [li]PCSX2 sees each patched disc as a different game, so per-game settings and other patches for the original won't load on it automatically.
 [li]Real PS2s: the patched image is a normal PS2 disc image, so it should work on a modded PS2 in principle, but that isn't tested or supported. Tell us if you try!
-[li]Full and Max carry the crests, badges and match pictures of the sister project [link name=LMAST-Realism]https://github.com/NexxusDrakoMultimedia/LMAST-Realism[/link] on the disc. Its kits still come from the Realism pack in PCSX2, and LMASTER's real names match them.
+[li]Full and Max carry the crests, badges, league logos and match pictures of the sister project [link name=LMAST-Realism]https://github.com/NexxusDrakoMultimedia/LMAST-Realism[/link] on the disc. Its kits still come from the Realism pack in PCSX2, and LMASTER's real names match them.
 [/ul]
 
 [b][size=3]Reporting a problem[/size][/b]
