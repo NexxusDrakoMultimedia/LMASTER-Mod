@@ -12,9 +12,9 @@ below each second division and the real names and grounds of the
 2005-06 season, and Max also makes the economy and injuries more of a
 challenge. The full list is in [CHANGELOG.md](CHANGELOG.md). How each
 change works, with what's been tested, is in LMAST-Reverse's
-[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/DOC/LMASTER_MOD.md).
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/DOC/LMASTER_MOD.md).
 
-> **Version 0.5.0.** Some changes still need more testing in real games
+> **Version 0.5.1.** Some changes still need more testing in real games
 > (they're marked in the changelog). Keep a copy of your original disc
 > image and your memory card, and please tell us what you find (see
 > [Reporting a problem](#reporting-a-problem)).
@@ -63,7 +63,7 @@ the disc for each.
    - Windows: **Delta Patcher** (recommended) or **xdelta UI**.
    - Mac or Linux: **xdelta3** (in most package managers, for example
      `brew install xdelta` or `sudo apt install xdelta3`).
-4. **This mod's files**: `LMASTER-Mod-0.5.0.zip` from the
+4. **This mod's files**: `LMASTER-Mod-0.5.1.zip` from the
    [Releases page](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases).
    Unzip it anywhere.
 
@@ -99,8 +99,8 @@ it for future versions of the mod.
 
 1. Open Delta Patcher.
 2. **Original file:** choose your `.iso`.
-3. **XDelta patch:** choose `LMASTER-Mod-0.5.0-Lite.xdelta`,
-   `LMASTER-Mod-0.5.0-Full.xdelta` or `LMASTER-Mod-0.5.0-Max.xdelta`.
+3. **XDelta patch:** choose `LMASTER-Mod-0.5.1-Lite.xdelta`,
+   `LMASTER-Mod-0.5.1-Full.xdelta` or `LMASTER-Mod-0.5.1-Max.xdelta`.
 4. Click the cog icon and **untick "Backup original file"** if you
    already made a copy (it saves several GB). Click **Apply patch**.
 5. Wait. The disc is big, so this can take a minute or two. Delta
@@ -110,7 +110,7 @@ it for future versions of the mod.
 **With xdelta3 (Mac, Linux or Windows command line):**
 
 ```bash
-xdelta3 -d -s "original.iso" "LMASTER-Mod-0.5.0-Full.xdelta" "LMASTER Full.iso"
+xdelta3 -d -s "original.iso" "LMASTER-Mod-0.5.1-Full.xdelta" "LMASTER Full.iso"
 ```
 
 **"The file you are trying to patch is not the right one"** means your
@@ -166,8 +166,8 @@ the middle of the screen. The intro and event movies stay stretched.
 | Edition | Widescreen file |
 |---|---|
 | Lite | `SLES-54151_CF8C34C0.pnach` |
-| Full | `SLES-54151_E7B0E4D4.pnach` |
-| Max | `SLES-54151_B1F6F596.pnach` |
+| Full | `SLES-54151_E763E4D4.pnach` |
+| Max | `SLES-54151_B125F596.pnach` |
 
 1. In PCSX2, open **Tools → Open Data Directory**, then the `patches`
    folder (create it if it isn't there).
@@ -186,7 +186,7 @@ edition's new name; that patch only works on the original disc.
 - **PCSX2 sees each patched disc as a different game.** Your per-game
   settings and any other `.pnach` cheats or patches for the original
   won't load on it automatically. The original's code is `3CB245D5`;
-  Lite's is `CF8C34C0`, Full's `E7B0E4D4` and Max's `B1F6F596` (also in
+  Lite's is `CF8C34C0`, Full's `E763E4D4` and Max's `B125F596` (also in
   `HASHES.txt`).
 - Some changes show up only at certain times. The season plan, for
   example, can only be set at the start of a season.
@@ -204,7 +204,7 @@ Found a bug, a crash, or something that doesn't look right? Please
 [open an issue](https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues)
 and tell us:
 
-- which edition (Lite, Full or Max) and version (0.5.0),
+- which edition (Lite, Full or Max) and version (0.5.1),
 - what you were doing, and what happened,
 - a screenshot if you can.
 
@@ -262,4 +262,4 @@ compatible with the GPL-3.0-or-later, and is not part of a release).
 How releases are built and numbered: [docs/RELEASING.md](docs/RELEASING.md).
 The editions, groups and switches this release is built from are
 described in LMAST-Reverse's
-[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/DOC/LMASTER_MOD.md#the-switch-levels).
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/DOC/LMASTER_MOD.md#the-switch-levels).

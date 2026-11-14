@@ -18,6 +18,25 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-11-14
+
+Built from LMAST-Reverse commit
+[`c2cf231`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd),
+and LMAST-Realism commit
+[`209703f`](https://github.com/NexxusDrakoMultimedia/LMAST-Realism/commit/209703f8afc15b17f18ab47a3eeed1574ac2f8a9),
+the same as 0.5.0. How the fix works is in that commit's
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/DOC/LMASTER_MOD.md#modern-font).
+
+No new career needed. Lite is unchanged.
+
+### Fixed (Full and Max)
+
+- **Stray pixels beside letters in the modern font.** Some letters had
+  specks next to them (above the "I" of Italy, after the "n" of Spain,
+  around the accents on the owner-name keyboard). The font is redrawn
+  with a blank margin around every letter. The specks were seen gone on
+  a test disc; the other screens listed in TESTING.md still need a look.
+
 ## [0.5.0] - 2026-11-14
 
 Built from LMAST-Reverse commit
@@ -507,7 +526,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...v0.3.0

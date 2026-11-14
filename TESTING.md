@@ -8,12 +8,12 @@ edition. The tools prove each patch writes the right bytes, but not that
 the game does what we think with them. Anyone with the game and PCSX2
 can help, and no code is needed.
 
-This list is for **LMASTER Mod 0.5.0**, built from LMAST-Reverse commit
-[`35090a0`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/35090a03a799ad1dab2dc0e0997c471e56223d88).
+This list is for **LMASTER Mod 0.5.1**, built from LMAST-Reverse commit
+[`c2cf231`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd).
 Its checks come from that commit's own
-[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/TESTING.md)
+[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/TESTING.md)
 and the status column of its
-[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/DOC/LMASTER_MOD.md#status).
+[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/DOC/LMASTER_MOD.md#status).
 The mod's code and its full test history live there; this file picks out
 what the three editions players download still need.
 
@@ -115,7 +115,9 @@ happens to show:
       off, overlaps or sits badly: mainly the longest club, player and
       stadium names in the lists and tables, the news pages, the match
       screens (scoreboard, substitutions, results), the text-heavy
-      messages, and the pad buttons and euro sign. Seen working on the
+      messages, and the pad buttons and euro sign, and for stray specks
+      beside letters (0.5.0 had some; 0.5.1 redraws the font to stop
+      them, and they were seen gone on a test disc). Seen working on the
       pre-match and Select Hometown screens.
 - [ ] **Computer clubs' sponsors and kit makers.** Every club shows a
       main sponsor and a supplier logo on its kit, each logo real and
