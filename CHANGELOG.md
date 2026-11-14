@@ -18,6 +18,62 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-11-14
+
+Built from LMAST-Reverse commit
+[`35090a0`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/35090a03a799ad1dab2dc0e0997c471e56223d88).
+How each change works, and how it was tested, is in that commit's
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/DOC/LMASTER_MOD.md).
+Full and Max's pictures are from LMAST-Realism commit
+[`209703f`](https://github.com/NexxusDrakoMultimedia/LMAST-Realism/commit/209703f8afc15b17f18ab47a3eeed1574ac2f8a9).
+
+No new career needed: nothing here changes how a career is saved, so
+careers from 0.4.0 carry on, in every edition.
+
+### Added (Lite, Full and Max)
+
+- **A banner on the title screen** naming the mod, its version and its
+  edition ("LMASTER MOD", then, say, "v0.5.0 FULL"). It takes the place
+  of the "LMAST Realism Mod Version 2.0" label in the title picture, so
+  each release can name itself. *(needs extra testing: seen on a Lite
+  disc in English; Full, Max and the other languages not yet)*
+- **An "AI use" section in the README**, and a pointer to it in
+  CREDITS.md. It declares the mod **AI:X** ("AI made") on the
+  [0RWX scale](https://0rwx.com/) and says who did what.
+
+### Added (Full and Max)
+
+- **Sponsors and kit makers for the computer clubs.** In the original
+  game only your club (and the rival) show a main sponsor and a kit
+  supplier on their shirts. Now every club does, drawn again each
+  season, and national teams show their kit maker and no sponsor.
+  The Italian, Spanish and Dutch clubs, whose real kits had their
+  sponsor printed in them, get generated kits in their club colours, so
+  their stripes and bands are approximate. *(needs extra testing: seen
+  on Real Betis and the English, Australian and New Zealand clubs and
+  England's national team; the other leagues and the seasons after the
+  first not yet)*
+- **A modern font.** The game's main text is drawn in Roboto Condensed
+  (Apache License 2.0) instead of the original face, at the same width, so lines that fit
+  before still fit. *(needs extra testing: seen on the pre-match and
+  Select Hometown screens; the longest names, the news and match screens
+  and the pad buttons not yet)*
+- **More of LMAST Realism's pictures on the disc.** The pictures in the
+  game's `CSP` picture packs, which the tools couldn't write before: the
+  club facilities screens, the advertising boards and the league logos
+  on the menu screens. *(needs extra testing: built, not yet seen in
+  the game)*
+
+### Fixed (Lite, Full and Max)
+
+- **The moving advert board at the last stadium.** The board you buy for
+  the moving electric boards didn't show at a level-4 ground; the
+  ground's data had the boards switched off. Computer clubs' level-4
+  grounds show the plain boards. *(needs extra testing)*
+- **The youth academy's second comment on a candidate** said "potential"
+  when it rates charisma ("almost no charisma" to "superb charisma").
+  *(needs extra testing)*
+
 ## [0.4.0] - 2026-11-08
 
 Built from LMAST-Reverse commit
@@ -451,7 +507,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.1.0...v0.2.0

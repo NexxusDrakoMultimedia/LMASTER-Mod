@@ -266,10 +266,18 @@ def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep,
     args = ed.get("args", [])
     print("\n== %s (--mod %s) ==" % (ed["name"], " ".join([ed["mod"]] + args)))
     py = sys.executable
-    out = run([py, "SRC/patch_disc.py", "patch", vanilla, iso, "--mod", ed["mod"]] + args,
-              repo, log)
+    # --version is what the title banner shows; without it the banner would
+    # name no version.
+    out = run([py, "SRC/patch_disc.py", "patch", vanilla, iso, "--mod", ed["mod"],
+               "--version", version] + args, repo, log)
     if "realism skipped" in out:
         fail("%s left LMAST-Realism's pictures out" % ed["name"])
+    # modern-font and title-banner draw with Roboto Condensed, which patch_disc.py
+    # finds in the system's fonts; an edition without it would leave them out.
+    for switch in ("modern-font", "title-banner"):
+        if "%s skipped" % switch in out:
+            fail("%s left %s out: install Roboto Condensed (RobotoCondensed[wght].ttf)"
+                 % (ed["name"], switch))
     crc = re.search(r"PCSX2 CRC of the executable ([0-9A-F]{8})", out)
     built = hashes(iso, tag + ".iso")
     run([py, "SRC/vcdiff.py", "make", vanilla, iso, patch], repo, log)

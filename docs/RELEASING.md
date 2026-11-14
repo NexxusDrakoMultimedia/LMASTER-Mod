@@ -86,6 +86,12 @@ CHANGELOG section and a line in the README's saves section.
    python tools/build_release.py "<path to the Redump .iso>"
    ```
 
+   The title banner and `modern-font` draw with Roboto Condensed, which
+   `patch_disc.py` finds in this repo's `fonts` folder (Apache License 2.0,
+   with its licence beside it);
+   the build refuses to run an edition that leaves them out, and passes
+   `VERSION` on as the banner's version.
+
    It refuses to build if the disc isn't the Redump dump, LMAST-Reverse
    isn't at the pinned commit or has uncommitted changes, `VERSION` isn't
    a valid semantic version, `CHANGELOG.md` has no section for it,

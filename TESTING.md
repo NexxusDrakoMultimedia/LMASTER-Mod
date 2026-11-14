@@ -8,12 +8,12 @@ edition. The tools prove each patch writes the right bytes, but not that
 the game does what we think with them. Anyone with the game and PCSX2
 can help, and no code is needed.
 
-This list is for **LMASTER Mod 0.4.0**, built from LMAST-Reverse commit
-[`8e45df4`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/8e45df4306a0cb1b8ee43eed582bdce9a0104916).
+This list is for **LMASTER Mod 0.5.0**, built from LMAST-Reverse commit
+[`35090a0`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/35090a03a799ad1dab2dc0e0997c471e56223d88).
 Its checks come from that commit's own
-[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/TESTING.md)
+[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/TESTING.md)
 and the status column of its
-[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/8e45df4306a0cb1b8ee43eed582bdce9a0104916/DOC/LMASTER_MOD.md#status).
+[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/35090a03a799ad1dab2dc0e0997c471e56223d88/DOC/LMASTER_MOD.md#status).
 The mod's code and its full test history live there; this file picks out
 what the three editions players download still need.
 
@@ -57,6 +57,21 @@ release; the CHANGELOG then drops its *(needs extra testing)* mark.
       boom gave no bonus and an average economy took 10% off.
 - [ ] *Short.* **The widescreen patch** in each edition: the picture is
       widened in a match, and menus and the HUD keep their shape.
+- [ ] *Short.* **The title banner.** The title screen shows "LMASTER
+      MOD" over the version and the edition's name in a navy and gold box
+      at the top left, with the logo untouched and the menu below as
+      before. Seen on a Lite disc in English; look in Full and Max, and
+      switch the language to French, German, Spanish or Italian once.
+- [ ] **The moving advert board at the last ground.** In a career with
+      the moving board bought and a level-4 stadium, the rotating
+      electric boards show at home games, and buying the LCD board
+      replaces them; a computer club's level-4 ground shows the plain
+      boards, not LCD. The board shop may also refuse the moving board at
+      level 4: say what it does.
+- [ ] *Short.* **The youth academy's second comment.** A youth
+      candidate's page reads "almost no charisma" up to "superb
+      charisma" under the summary, with no cut-off or stray spaces. Say
+      which screen it was, and try another language if you can.
 
 These can't easily be seen in the game, so a report is welcome if one
 happens to show:
@@ -96,6 +111,25 @@ happens to show:
       fills when sold out.
 - [ ] **The "two months" and "nine months" injury lines** show on a
       long-injured player's condition, in each language you play in.
+- [ ] **The modern font.** Look through the screens for text that is cut
+      off, overlaps or sits badly: mainly the longest club, player and
+      stadium names in the lists and tables, the news pages, the match
+      screens (scoreboard, substitutions, results), the text-heavy
+      messages, and the pad buttons and euro sign. Seen working on the
+      pre-match and Select Hometown screens.
+- [ ] **Computer clubs' sponsors and kit makers.** Every club shows a
+      main sponsor and a supplier logo on its kit, each logo real and
+      none blank, broken or oversized, two clubs differing, and the
+      sponsors changing after a season. Seen on Real Betis, the English,
+      Australian and New Zealand clubs and England's national team. Still
+      to check: the other leagues, and the Italian, Spanish and Dutch
+      clubs (Milan, Barcelona, Ajax and some smaller ones), whose kits are
+      now generated in the club's colours: say which look wrong (colours
+      or pattern) and what they should be.
+- [ ] **LMAST Realism's club facilities screens, advertising boards and
+      league logos on the disc.** They show the pack's pictures, with
+      nothing garbled or missing: the facilities screens, an advertising
+      board in a match, and the logos on the six-nation league screens.
 
 ## Max only
 

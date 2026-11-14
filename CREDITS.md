@@ -22,6 +22,11 @@ The widescreen patches are LMAST-Reverse's
 Real logos and texture fixes are a separate project,
 [LMAST-Realism](https://github.com/NexxusDrakoMultimedia/LMAST-Realism).
 
+The modern font in Full and Max is **Roboto Condensed** (Copyright 2011
+Google Inc., [Apache License 2.0](fonts/LICENSE-Apache-2.0.txt)), drawn
+by LMAST-Reverse's `fontmod.py` from the copy in [fonts/](fonts/). Only
+the drawn pictures go into a disc, never the font file.
+
 ## Thanks
 
 - [Redump](https://redump.info/) for the verified disc fingerprints the
