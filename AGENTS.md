@@ -83,14 +83,16 @@ matters in two places:
   edition and version. `python SRC/manifest.py show <file>` in
   LMAST-Reverse prints what that build changes from the retail game, and
   `diff <a> <b>` compares two builds.
-- **Releases (not wired in yet).** Once `release.toml` pins an
-  LMAST-Reverse commit that has `manifest.py`, `tools/build_release.py`
-  should run `manifest.py make` for each edition (the same `--mod`,
-  `--font`, `--realism` and `--version` it gives `patch_disc.py`) and
-  ship `manifest-<edition>.json` in the release folder. Don't add the
-  call before the pin includes the file: the build would fail on the
-  pinned commit. Do it with the pin bump, the version, `CHANGELOG.md`
-  and `TESTING.md` of the next release.
+- **Releases.** `tools/build_release.py` runs `manifest.py make` for each
+  edition (the edition's `--mod` and the release's `--version`, with
+  `--no-date --no-writes`, the patch, the Redump disc's SHA-1 and the
+  executable's CRC) and ships `manifest-<edition>.json` in the release
+  folder. It then runs `manifest.py check` against the edition in
+  `release.toml` and the pinned commit, and checks the manifest's CRC
+  against the one the build found. The build refuses to run if the
+  pinned LMAST-Reverse has no `SRC/manifest.py`, so a pin from before
+  `d8ab61f` no longer builds. The first full build to run this is the
+  release after 0.6.0.
 
 ## Making a release
 

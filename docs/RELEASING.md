@@ -101,6 +101,16 @@ CHANGELOG section and a line in the README's saves section.
    the built disc, and, if `xdelta3` is installed, applies it with
    xdelta3 too. `--keep-isos` keeps the built discs in `build/` for
    testing in PCSX2. The log is `build/build.log`.
+
+   Each edition also gets `manifest-<edition>.json` in the release
+   folder, made by LMAST-Reverse's `SRC/manifest.py` with no date, so
+   building the release again gives the same file: the switches the
+   edition turns on, the seed, the tools commit, the patch's SHA-256, the
+   disc it applies to and the executable's PCSX2 CRC. The build checks
+   each against the edition in `release.toml` and the pinned commit, and
+   refuses to run if the pinned commit has no `SRC/manifest.py`.
+   `python SRC/manifest.py show <file>` in LMAST-Reverse prints what an
+   edition changes from the retail game.
 7. **Test** every edition in PCSX2: boot, start a career, save, load.
 8. **Commit and tag:**
 

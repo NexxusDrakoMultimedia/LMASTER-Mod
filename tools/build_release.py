@@ -12,7 +12,13 @@ with it, so a release is known to work in the patchers players use.
 
 It also writes LMAST-Reverse's widescreen patch for each edition under the
 edition's own PCSX2 CRC, after checking that none of the patch's writes is
-at or next to a byte the edition changed in SLES_541.51.
+at or next to a byte the edition changed in SLES_541.51, and a build
+manifest for each edition (LMAST-Reverse's SRC/manifest.py): the switches
+the edition turns on, the seed, the tools commit, the patch's SHA-256, the
+disc it applies to and the executable's PCSX2 CRC, with no date so that
+building the release again gives the same file. Each is checked with
+`manifest.py check` against the edition in release.toml and the pinned
+commit, and its CRC against the one the build found.
 
 Usage (from this repo's root):
     python tools/build_release.py <vanilla.iso> [--keep-isos] [--allow-dirty]
@@ -22,6 +28,7 @@ Writes build/ (scratch, git-ignored) and dist/ (git-ignored):
         LMASTER-Mod-<version>-Full.xdelta
         LMASTER-Mod-<version>-Lite.xdelta
         widescreen/SLES-54151_<CRC>.pnach   one per edition, comments stripped
+        manifest-<edition>.json             one per edition, see SRC/manifest.py
         README.md  CHANGELOG.md  TESTING.md  LICENSE
         HASHES.txt   the disc players need, and what each patch makes
         SHA256SUMS   sha256sum -c format, for the files in the folder
@@ -30,6 +37,7 @@ Writes build/ (scratch, git-ignored) and dist/ (git-ignored):
 Standard library only; Python 3.11+ (tomllib).
 """
 import hashlib
+import json
 import os
 import re
 import shutil
@@ -258,7 +266,32 @@ def write_widescreen(vanilla_exe, iso, crc, repo, out_dir):
         name, len(writes), len(changed))
 
 
-def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep, log):
+def make_manifest(ed, version, repo, build, out_dir, tag, patch, patch_disc_out, source, crc, log):
+    """Write manifest-<edition>.json beside the edition's patch with LMAST-Reverse's
+    manifest.py, then check it: it must hold exactly the edition's `mod` (and
+    `--version`), name the pinned commit unless `source["commit"]` is None
+    (--allow-dirty), and carry the executable CRC the build found."""
+    path = os.path.join(out_dir, "manifest-%s.json" % ed["name"].lower())
+    # manifest.py reads the executable's CRC from patch_disc.py's own output.
+    log_path = os.path.join(build, tag + ".patch_disc.txt")
+    with open(log_path, "w", encoding="utf-8") as f:
+        f.write(patch_disc_out)
+    py = sys.executable
+    run([py, "SRC/manifest.py", "make", path, "--mod", ed["mod"], "--version", version,
+         "--no-date", "--no-writes", "--patch", patch, "--log", log_path,
+         "--vanilla-sha1", source["sha1"], "--vanilla-redump", source["redump"]], repo, log)
+    check = [py, "SRC/manifest.py", "check", path, "--mod", ed["mod"], "--version", version]
+    if source["commit"]:
+        check += ["--commit", source["commit"]]
+    run(check, repo, log)
+    os.remove(log_path)
+    with open(path, encoding="utf-8") as f:
+        got = json.load(f).get("executable_crc")
+    if got != crc:
+        fail("%s's manifest names executable CRC %s, the build found %s" % (ed["name"], got, crc))
+
+
+def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep, log, source):
     tag = "%s-%s-%s" % (PROJECT, version, ed["name"])
     iso = os.path.join(build, tag + ".iso")
     patch = os.path.join(out_dir, tag + ".xdelta")
@@ -270,6 +303,7 @@ def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep,
     # name no version.
     out = run([py, "SRC/patch_disc.py", "patch", vanilla, iso, "--mod", ed["mod"],
                "--version", version] + args, repo, log)
+    out_log = out
     if "realism skipped" in out:
         fail("%s left LMAST-Realism's pictures out" % ed["name"])
     # modern-font and title-banner draw with Roboto Condensed, which patch_disc.py
@@ -288,6 +322,9 @@ def build_edition(ed, version, vanilla, vanilla_exe, repo, build, out_dir, keep,
     print("  patch re-applied: result matches the built disc")
     x3 = xdelta3_check(vanilla, patch, built["sha1"], check, log)
     pcsx2_crc = crc.group(1) if crc else VANILLA_CRC
+    make_manifest(ed, version, repo, build, out_dir, tag, patch, out_log, source,
+                  crc.group(1) if crc else None, log)
+    print("  manifest-%s.json made and checked" % ed["name"].lower())
     ws = write_widescreen(vanilla_exe, iso, pcsx2_crc, repo, out_dir)
     print("  " + ws)
     if not keep:
@@ -362,6 +399,13 @@ def main(argv):
     realism = check_realism(cfg, repo, "--allow-dirty" in flags)
     vanilla = check_vanilla(vanilla_path, cfg)
     vanilla_exe = executable(vanilla_path, repo)
+    if not os.path.isfile(os.path.join(repo, "SRC", "manifest.py")):
+        fail("LMAST-Reverse at the pinned commit has no SRC/manifest.py (release manifests)")
+    # What manifest.py records and checks: the disc, and the pinned commit (not with
+    # --allow-dirty, which builds from tools manifest.py marks as uncommitted).
+    redump = cfg["vanilla"]["redump"].rstrip("/").rsplit("/", 1)[-1]
+    source = {"sha1": vanilla["sha1"], "redump": redump,
+              "commit": None if "--allow-dirty" in flags else head}
 
     build = os.path.join(ROOT, "build")
     out_dir = os.path.join(ROOT, "dist", "%s-%s" % (PROJECT, version))
@@ -375,7 +419,7 @@ def main(argv):
         log.write("LMASTER Mod %s from LMAST-Reverse %s%s\n\n"
                   % (version, head, ", LMAST-Realism %s" % realism if realism else ""))
         results = [build_edition(ed, version, vanilla_path, vanilla_exe, repo, build, out_dir,
-                                 "--keep-isos" in flags, log) for ed in cfg["edition"]]
+                                 "--keep-isos" in flags, log, source) for ed in cfg["edition"]]
     for name in PLAYER_DOCS:
         shutil.copy2(os.path.join(ROOT, name), out_dir)
     write_hashes(os.path.join(out_dir, "HASHES.txt"), version, vanilla, results, head, realism, cfg)
