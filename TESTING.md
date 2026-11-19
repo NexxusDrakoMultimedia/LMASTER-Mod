@@ -8,12 +8,12 @@ edition. The tools prove each patch writes the right bytes, but not that
 the game does what we think with them. Anyone with the game and PCSX2
 can help, and no code is needed.
 
-This list is for **LMASTER Mod 0.5.1**, built from LMAST-Reverse commit
-[`c2cf231`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd).
+This list is for **LMASTER Mod 0.6.0**, built from LMAST-Reverse commit
+[`d8ab61f`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d8ab61fc65a160979b2f988d40085a2d69ef3686).
 Its checks come from that commit's own
-[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/TESTING.md)
+[`TESTING.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d8ab61fc65a160979b2f988d40085a2d69ef3686/TESTING.md)
 and the status column of its
-[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd/DOC/LMASTER_MOD.md#status).
+[`LMASTER_MOD.md`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d8ab61fc65a160979b2f988d40085a2d69ef3686/DOC/LMASTER_MOD.md#status).
 The mod's code and its full test history live there; this file picks out
 what the three editions players download still need.
 
@@ -127,7 +127,34 @@ happens to show:
       to check: the other leagues, and the Italian, Spanish and Dutch
       clubs (Milan, Barcelona, Ajax and some smaller ones), whose kits are
       now generated in the club's colours: say which look wrong (colours
-      or pattern) and what they should be.
+      or pattern) and what they should be. Your own club's and the
+      rival's sponsors stay the game's own (the Sponsor screen, and the
+      rival's kit in a match).
+- [ ] **Club eras: managers.** Play a season and into the next two.
+      A computer club changes manager every three seasons, a third of the
+      clubs each year (the first changes come in 2007-08, 2008-09 and
+      2009-10), and the new manager's formations and tactics show in the
+      club's play. Your club, the rival and the national teams keep their
+      own. A manager is shown nowhere in the game, so the best evidence is
+      a save state taken in a match against a computer club: say the club
+      and the season. A whole season also has to play with no freeze, and
+      save and load once.
+- [ ] **Club eras: kits.** When a club changes era it wears a new kit
+      maker's design with new away colours, the shirt and shorts
+      numbers and the emblems show against the colours they sit on, and
+      the supplier logo on the shirt belongs to the kit maker whose design
+      it is. Check an era 0 club as the control, and a club after
+      the second or third change. Say which kits look wrong.
+- [ ] **Keeper kits and the club-creation presets.** One of the 114
+      clubs with generated kits (Milan, Barcelona, Ajax and others) shows
+      proper home and away keeper kits in a match, and creating a club
+      starts from kits that show the shirt number and an emblem.
+- [ ] **Main sponsors by club size.** Over a career, a club's sponsor
+      changes from season to season but stays among sponsors that suit
+      its size, and a top club of a big league carries a big-name one.
+- [ ] **The third tier's clubs in the eras.** A third-tier club
+      (the playoff clubs of the hidden tier) changes manager and kit
+      like the rest, after its second change too.
 - [ ] **LMAST Realism's club facilities screens, advertising boards and
       league logos on the disc.** They show the pack's pictures, with
       nothing garbled or missing: the facilities screens, an advertising
@@ -140,9 +167,13 @@ happens to show:
       compare.
 - [ ] **Overseas bases** cost twice as much to set up, invest in and keep
       up.
-- [ ] **Transfer fees above £120M**, up to about £246M for the very best
-      player at a top club, and whether the transfer screens show them
-      correctly (lesser players' fees are tested).
+- [ ] **Transfer fees by player rank.** On the Post Player screen the
+      estimate for a player of the lowest ranks (0 to 5) is the original
+      game's, and for ranks 6 to 11 about 1.5 times it: an 18-year-old of
+      rank 10 that showed £12.3M in 0.5.1 should show about £6.2M, in the
+      same career and week. Fees above £120M, up to about £246M for the
+      very best player at a top club, also need a look, and whether the
+      transfer screens show them correctly.
 - [ ] **The fanbase's crowds and TV offers**: a big fanbase brings
       bigger crowds and TV offers than a small one, and sells more
       merchandise at the top of the scale (lower merchandise income for

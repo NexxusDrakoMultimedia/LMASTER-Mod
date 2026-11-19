@@ -7,7 +7,7 @@ A fan-made fix-and-restore mod for *Let's Make a Soccer Team!* on PS2 (European 
 
 ## Editions
 - **Lite:** the bugs fixed and cut features restored. Uses your existing saves.
-- **Full:** Lite plus a hidden third tier, fairer fixtures, the real names and grounds of 2005-06, LMAST-Realism's pictures on the disc, sponsors on every kit and a modern font. Original difficulty. Own saves, new career.
+- **Full:** Lite plus a hidden third tier, fairer fixtures, the real names and grounds of 2005-06, LMAST-Realism's pictures on the disc, sponsors on every kit, club eras and a modern font. Original difficulty. Own saves, new career.
 - **Max:** Full plus a harder economy and balance changes. Own saves, new career.
 
 ## What you need

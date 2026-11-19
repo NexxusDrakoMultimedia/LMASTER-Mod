@@ -1,12 +1,12 @@
 [div align=center][b][size=4]LMASTER Mod[/size][/b]
 [i]A fan-made fix-and-restore mod for Let's Make a Soccer Team! on PlayStation 2 (European release)[/i]
 
-[b]Current version: 0.5.1[/b] (2026-11-14)
+[b]Current version: 0.6.0[/b] (2026-11-20)
 [link name=Download]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/releases/latest[/link] · [link name=Changelog]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/blob/main/CHANGELOG.md[/link] · [link name=Full instructions (README)]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod#readme[/link] · [link name=Report a problem]https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/issues[/link][/div]
 
 [b][size=3]What is it?[/size][/b]
 
-LMASTER fixes bugs [i]Let's Make a Soccer Team![/i] shipped with and brings back features that were switched off or cut. The Full and Max editions go further: a hidden third tier below each second division, the real names and grounds of the 2005-06 season, the crests and pictures of LMAST-Realism, a sponsor and kit maker on every club's shirt, and (in Max) a tougher economy.
+LMASTER fixes bugs [i]Let's Make a Soccer Team![/i] shipped with and brings back features that were switched off or cut. The Full and Max editions go further: a hidden third tier below each second division, the real names and grounds of the 2005-06 season, the crests and pictures of LMAST-Realism, a sponsor and kit maker on every club's shirt, computer clubs that change manager and kit every few seasons, and (in Max) a tougher economy.
 
 It comes as small patch files you apply to your own disc image of the game. The mod contains none of the game's files.
 
@@ -38,7 +38,8 @@ You can have all three: patch a copy of the disc for each. Full and Max keep the
 [li][b]Real names[/b] of leagues, competitions, clubs, nations and national teams as of 2005-06, in all five languages.
 [li][b]Real grounds[/b]: every club at its 2005-06 stadium, with its real name and about its real size. Your stadium is named after you.
 [li][b]Realism's pictures on the disc[/b]: the club crests, competition badges, league logos and match pictures of LMAST-Realism, with no texture pack needed.
-[li][b]Sponsors and kit makers[/b] on every club's shirt, drawn again each season, and the game's text in a modern font.
+[li][b]Sponsors and kit makers[/b] on every club's shirt, bigger sponsors for bigger clubs, and the game's text in a modern font.
+[li][b]Club eras[/b]: every computer club changes manager every three seasons (a third of them each year), with his own formations and tactics, and changes kit with each new era. Your club and the rival are never touched.
 [li]Fairer league fixtures, more varied sponsor boards, and the cut "two months" and "nine months" injury lines.
 [/ul]
 

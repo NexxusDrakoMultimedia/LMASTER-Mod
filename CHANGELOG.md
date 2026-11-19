@@ -18,6 +18,73 @@ Please tell us how it goes.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-11-20
+
+Built from LMAST-Reverse commit
+[`d8ab61f`](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/commit/d8ab61fc65a160979b2f988d40085a2d69ef3686).
+How each change works, and how it was tested, is in that commit's
+[LMASTER_MOD.md](https://github.com/NexxusDrakoMultimedia/LMAST-Reverse/blob/d8ab61fc65a160979b2f988d40085a2d69ef3686/DOC/LMASTER_MOD.md).
+Full and Max's pictures are from LMAST-Realism commit
+[`0f8831b`](https://github.com/NexxusDrakoMultimedia/LMAST-Realism/commit/0f8831bf8e92cb8189676f4513a98947ac7b9233),
+which holds the same pictures as the commit 0.5.0 and 0.5.1 used.
+
+**Lite is unchanged.** Full and Max gain "club eras", below.
+
+Nothing here is written into a save, so a career from 0.5.1 should carry
+on in Full and Max (not tried yet). The computer clubs' sponsors, kits
+and managers will not be the ones you saw before: they are chosen again.
+
+### Added (Full and Max)
+
+- **Club eras: new managers.** Every computer club changes manager every
+  three seasons, a third of the clubs each year, starting in the second
+  season. Better clubs get better managers, and no two clubs share one.
+  A new manager brings his own formations and tactics, so the club plays
+  differently. Your club, the rival, the national teams and the opening
+  playoffs are never touched. *(needs extra testing: seen working in a
+  match against a club in its second era on a test disc; a whole season
+  and the later eras not yet)*
+- **Club eras: new kits.** When a club changes era, it changes kit too:
+  a new kit maker (better clubs get the bigger names), new shirt and
+  shorts designs from that maker, and new away colours. Every club's kit
+  has numbers and emblems that show against its colours, in every era.
+  *(needs extra testing: the kits were seen to look right in a match on a
+  test disc; the later seasons not yet)*
+- **Keeper kits for the clubs with generated kits.** The 114 clubs
+  whose real kits had their sponsor printed in them (Italy, Spain, the
+  Netherlands and others) now have proper keeper kits, home and away.
+  *(needs extra testing: seen to look right on a test disc; not yet
+  looked at in a match)*
+- **Club creation starts with numbers and emblems on.** The 32 starting
+  kits you can pick when you create your club show the shirt number and
+  an emblem instead of starting blank. *(needs extra testing)*
+- **Bigger sponsors for bigger clubs.** A club's main sponsor is now
+  drawn from the sponsors that suit its size, not from all 199. The
+  top clubs carry the richest sponsors. It is still drawn again each
+  season. *(needs extra testing: seen on a top club, a mid-table club
+  and two third-tier clubs; a whole career not yet)*
+- **The third tier's clubs join in.** The clubs of the hidden third
+  tier get the same managers, kits and sponsors as the other clubs.
+  *(needs extra testing: seen in the first two eras)*
+
+### Changed (Full and Max)
+
+- **Your club and the rival keep their own sponsors.** The sponsors
+  and kit makers given to computer clubs no longer reach your club, the
+  rival or the versus teams.
+- **Sponsor boards and sponsors are the same on every disc.** Every
+  random choice in the mod now comes from one fixed seed, so two people
+  who build the same edition get the same disc. The boards around each
+  ground and the sponsors drawn for each club are different from
+  0.5.1's, but not different from one disc to the next.
+
+### Changed (Max)
+
+- **Transfer fees by player rank.** The lowest-ranked players now cost
+  what they did in the original game; the fees then climb with rank, up
+  to £250M for the very best. In 0.5.1 the lesser players were dearer
+  too. *(needs extra testing: the Post Player screen's estimates)*
+
 ## [0.5.1] - 2026-11-14
 
 Built from LMAST-Reverse commit
@@ -526,7 +593,8 @@ The first testing release. Built from LMAST-Reverse commit
     TV offers. A small one brings less.
   - Merchandise stock costs more to make, so it earns smaller profits.
 
-[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/NexxusDrakoMultimedia/LMASTER-Mod/compare/v0.3.0...v0.4.0

@@ -9,7 +9,7 @@
 # to this repo's root, and the commit a release must be built from. Bump
 # the commit when a new release picks up newer LMAST-Reverse code.
 lmast_reverse = "../LMAST-Reverse"
-commit = "c2cf231dc0d0fd25e3134a5c5a56411e2a1d56fd"
+commit = "d8ab61fc65a160979b2f988d40085a2d69ef3686"
 upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Reverse"
 
 [realism]
@@ -17,7 +17,7 @@ upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Reverse"
 # and lmaster-max) puts on the disc, and the commit a release must use.
 # patch_disc.py finds it beside LMAST-Reverse, so it must be there.
 path = "../LMAST-Realism"
-commit = "209703f8afc15b17f18ab47a3eeed1574ac2f8a9"
+commit = "0f8831bf8e92cb8189676f4513a98947ac7b9233"
 upstream = "https://github.com/NexxusDrakoMultimedia/LMAST-Realism"
 
 [vanilla]
