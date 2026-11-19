@@ -4,8 +4,7 @@
 # Contributing to the LMASTER Mod
 
 Thank you for helping. This guide covers how to report a problem, how to
-test a release, and how to send a change to this repository. Everyone
-taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
+test a release, and how to send a change to this repository.
 
 This repository only **packages** the mod: it pins the LMAST-Reverse and
 LMAST-Realism commits a release is built from, and builds, checks and

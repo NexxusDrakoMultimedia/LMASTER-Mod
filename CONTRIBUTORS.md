@@ -68,7 +68,6 @@ license; a license is named here only where the repository states it.
 | [PCSX2](https://pcsx2.net/) | running the game for the in-game tests, and the widescreen patch format and CRC naming |
 | [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed) by Christian Robertson (Copyright 2011 Google Inc.; [Apache License 2.0](fonts/LICENSE-Apache-2.0.txt)) | the face drawn into the game's text in Full and Max and into the title banner. The copy is in [`fonts/`](fonts/); only drawn pictures go into a disc, never the font file |
 | [0RWX](https://0rwx.com/) by Namtao Productions (CC0) | the scale of AI usage the README declares this project at |
-| [Contributor Covenant](https://www.contributor-covenant.org/) (CC BY 4.0) | the text of the [Code of Conduct](CODE_OF_CONDUCT.md) |
 | [Keep a Changelog](https://keepachangelog.com/) and [Semantic Versioning](https://semver.org/) | the formats of the changelog and the version numbers |
 
 ## Getting listed
