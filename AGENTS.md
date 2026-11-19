@@ -69,6 +69,29 @@ There is no test suite: the build is the check. For a doc-only change,
 `check_changelog` and `check_testing` in `tools/build_release.py` verify
 the parts the build would refuse.
 
+## Build manifests
+
+LMAST-Reverse's `SRC/manifest.py` writes a small JSON file for a build:
+the edition, every switch with its group and description, the options
+(`--eras-offset`, `--skip-nation`, font and Realism names, `--version`),
+the LMASTER seed and the tools commit. It is documented in
+`../LMAST-Reverse/DOC/LMASTER_MOD.md#build-manifests`. In this repo it
+matters in two places:
+
+- **Bug reports.** Ask for the player's `<name>.manifest.json` (File >
+  Build disc writes one beside the patch) or, for a release patch, the
+  edition and version. `python SRC/manifest.py show <file>` in
+  LMAST-Reverse prints what that build changes from the retail game, and
+  `diff <a> <b>` compares two builds.
+- **Releases (not wired in yet).** Once `release.toml` pins an
+  LMAST-Reverse commit that has `manifest.py`, `tools/build_release.py`
+  should run `manifest.py make` for each edition (the same `--mod`,
+  `--font`, `--realism` and `--version` it gives `patch_disc.py`) and
+  ship `manifest-<edition>.json` in the release folder. Don't add the
+  call before the pin includes the file: the build would fail on the
+  pinned commit. Do it with the pin bump, the version, `CHANGELOG.md`
+  and `TESTING.md` of the next release.
+
 ## Making a release
 
 `docs/RELEASING.md` has the full steps. In short: pin the commits, set
